@@ -1,6 +1,7 @@
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: path.join(__dirname, "src"),
@@ -19,7 +20,10 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        loader: ExtractTextPlugin.extract(
+          'style', // backup loader when not building .css file
+          'css?sourceMap!sass?sourceMap' // loaders to preprocess CSS
+        )
       }
     ]
   },
@@ -27,9 +31,10 @@ module.exports = {
     path: __dirname + "/src/",
     filename: "app.min.js"
   },
-  plugins: debug ? [] : [
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+  sassLoader: {
+    includePaths: ['client/style']
+  },
+  plugins: [
+    new ExtractTextPlugin('src/main.css')
   ],
 };
