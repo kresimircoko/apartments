@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+// Parent
 var Nav = React.createClass({
   render: function() {
     var navItems = ['Home', 'Information', 'Register']
@@ -11,6 +12,7 @@ var Nav = React.createClass({
   }
 });
 
+// Child
 var NavItems = React.createClass({
   render: function() {
     var navListItems = this.props.items.map(function(item) {

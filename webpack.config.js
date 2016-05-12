@@ -35,6 +35,6 @@ module.exports = {
     includePaths: ['client/style']
   },
   plugins: [
-    new ExtractTextPlugin('src/main.css')
+    new ExtractTextPlugin('[name].css')
   ],
 };
