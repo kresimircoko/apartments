@@ -35,7 +35,11 @@ module.exports = {
     includePaths: ['client/style']
   },
   plugins: [
+<<<<<<< HEAD
     new ExtractTextPlugin('[name].css'),
     HTMLWebpackPluginConfig
+=======
+    new ExtractTextPlugin('src/main.css')
+>>>>>>> parent of 58c1d10... Minor Work Done
   ],
 };
