@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var routes = require('./config/routes');
+var stylesheet = require('./includes/scss/base.scss');
 
 
 ReactDOM.render(

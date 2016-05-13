@@ -1,0 +1,13 @@
+#mainNavigation {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: $clouds;
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 21px;
+    color: $emerald;
+  }
+}
