@@ -1,0 +1,72 @@
+@import "~normalize.css";
+@import "custom-resets";
+@import "colors";
+@import "typography";
+
+#mainNav {
+  position: fixed;
+  right: 0; left: 0;
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 300;
+    color: $clouds;
+  }
+}
+
+#heroLanding {
+  height: 100vh;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)),
+    url(/../img/hero.jpg);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#heroWelcome {
+  font-family: $Mont;
+  font-size: 80px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  width: 50%;
+  color: $clouds;
+  text-decoration: underline;
+}
+
+#heroInput {
+  width: 50%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: $emerald;
+  padding: 10px 30px;
+  color: $darkGrey;
+  font-size: 32px;
+  font-family: $Rale;
+  font-weight: 600;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+#heroCTA {
+  width: 50%;
+  border: none;
+  box-shadow: none;
+  background-color: $darkGrey;
+  margin-top: 20px;
+  color: $clouds;
+  padding: 10px 0;
+  font-family: $Mont;
+  font-size: 32px;
+  text-transform: uppercase;
+}

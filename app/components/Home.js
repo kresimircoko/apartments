@@ -6,8 +6,8 @@ var Home = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Battle</h1>
-        <p>Some fancy motto</p>
+        <h1>RENTR</h1>
+        <p>Najbolje mjesto za pretragu stanova</p>
         <Link to='/playerOne'>
           <button type='button'>Get Started</button>
         </Link>
