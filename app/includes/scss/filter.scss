@@ -1,3 +1,21 @@
 #filterContainer {
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#filterHeading {
+  text-align: center;
+  color: $grey;
+  font-family: $Mont;
+  margin-bottom: 20px;
+}
+
+.filterCloud {
+
+  span {
+    display: inline-block;
+    padding: 10px;
+    background-color: $whellow;
+    margin: 2px;
+  }
 }

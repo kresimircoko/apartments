@@ -8,6 +8,7 @@ var FilterContainer = React.createClass({
   render: function() {
     return (
       <section id="filterContainer" className="container">
+        <h2 id="filterHeading" className="full-section">FILTRIRAJ</h2>
         <Filter />
         <Filter />
         <Filter />

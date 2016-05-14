@@ -5,7 +5,14 @@ var Link = ReactRouter.Link;
 
 function Filter() {
   return (
-    <h1>Filter</h1>
+    <div className="filterCloud quarter-section">
+      <span>Šubićevac</span>
+      <span>Meterize</span>
+      <span>Baldekin</span>
+      <span>Vidici</span>
+      <span>Rokići</span>
+      <span>Grad</span>
+    </div>
   )
 };
 
