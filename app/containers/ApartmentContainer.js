@@ -8,7 +8,9 @@ var Apartment = require('../components/Apartment');
 var ApartmentContainer = React.createClass({
   render: function() {
     return (
-      <div id="apartmentContainer">
+      <div id="apartmentContainer" className="container">
+        <Apartment />
+        <Apartment />
         <Apartment />
         <Apartment />
         <Apartment />

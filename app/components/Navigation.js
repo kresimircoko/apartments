@@ -6,10 +6,9 @@ var Link = ReactRouter.Link;
 
 function Navigation() {
   return (
-    <nav id="mainNavigation">
-      <Link to='/'>Naslovna</Link>
-      <Link to='/filter'>Filter</Link>
-      <Link to='/registration'>Registracija</Link>
+    <nav id="mainNavigation" className="container">
+      <Link to='/'><i className="fa fa-home"></i></Link>
+      <Link to='/register'>Register</Link>
     </nav>
   )
 };

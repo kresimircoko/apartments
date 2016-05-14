@@ -6,13 +6,15 @@ var Link = ReactRouter.Link;
 
 function Apartment() {
   return (
-    <div className = "apartment">
-      <img src="https://placehold.it/200x200" alt="#"/>
-      <span>Lokacija</span>
-      <span>Kvadratura</span>
-      <span>Cijena</span>
-      <span>Broj Osoba</span>
-      <button type="button">Detalji</button>
+    <div className="apartment third-section subsection">
+      <img className="apartmentImg" src="https://placehold.it/380x200" alt="#"/>
+      <section className="apartmentInfo">
+        <span>Lokacija</span>
+        <span>Kvadratura</span>
+        <span>Cijena</span>
+        <span>Broj Osoba</span>
+      </section>
+      <button className="apartmentDetailsBtn" type="button">Detalji</button>
     </div>
   )
 };
