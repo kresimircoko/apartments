@@ -2,9 +2,17 @@
   box-sizing: border-box;
 }
 
-input, button {
+input, button, textarea {
   border: none;
   box-shadow: none;
   outline: none;
   padding: 10px 20px;
+}
+
+input[type='file'] {
+  background-color: white;
+}
+
+button:hover {
+  cursor: pointer;
 }

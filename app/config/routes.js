@@ -10,12 +10,14 @@ var Main = require('../components/Main');
 var Home = require('../components/Home');
 var NavContainer = require('../containers/NavContainer');
 var RegisterContainer = require('../containers/RegisterContainer');
+var DashboardContainer = require('../containers/DashboardContainer');
 
 var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
       <Route path='/registration' component={RegisterContainer} />
+      <Route path='/dashboard' component={DashboardContainer} />
     </Route>
   </Router>
 )

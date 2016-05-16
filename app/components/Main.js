@@ -9,8 +9,6 @@ var Main = React.createClass({
       <div id='appContainer' className="full-container">
         <NavContainer />
         {this.props.children}
-        <FilterContainer />
-        <ApartmentContainer />
       </div>
     )
   }
