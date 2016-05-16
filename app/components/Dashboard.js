@@ -40,9 +40,10 @@ function Dashboard() {
         <button id="dashSubmit" type="submit">Spremi / Objavi</button>
       </form>
       <div id="dashboardOverview" className="half-section">
+        <h3 id="overviewSelectorHeading" className="subsection">Vrste pogleda</h3>
         <div id="overviewSelector" className="subsection">
-          <button className="third-section">Compact</button>
-          <button className="third-section isActive">Cozy</button>
+          <button className="third-section">Kompaktni</button>
+          <button className="third-section isActive">Opušteni</button>
         </div>
 
         <div id="dashOverviewContainer">

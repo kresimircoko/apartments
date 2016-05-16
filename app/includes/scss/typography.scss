@@ -30,6 +30,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
 }
 
+h3 {
+  color: $lightGrey;
+  text-transform: uppercase;
+  font-family: $Mont;
+  font-weight: 700;
+}
+
 input, button {
   font-family: $Mont;
 }
