@@ -1,4 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500|Montserrat:400,700|Raleway:300,400,500,700|Open+Sans:400,300,600|Fira+Sans:400,300,500|Roboto:400,300,500|Source+Sans+Pro:400,200,300,600&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500|Coustard:400,900|Montserrat:400,700|Raleway:300,400,500,700|Open+Sans:400,300,600|Fira+Sans:400,300,500|Roboto:400,300,500|Source+Sans+Pro:400,200,300,600&subset=latin,latin-ext);
+
+// Fonts
+$Rale : Raleway, sans-serif;
+$Mont : Montserrat, sans-serif;
+$OS: Open Sans, sans-serif;
+$FS: Fira Sans, sans-serif;
+$Robo: Roboto, sans-serif;
+$SSP: Source Sans Pro, sans-serif;
+$Coustard: Coustard, serif;
+
 
 a, p, h1, h2, h3, h4, h5, h6, span, li {
   color: $darkGrey;

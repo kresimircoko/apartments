@@ -18,7 +18,10 @@ var Apartment = React.createClass({
   render: function() {
     return (
       <div className="apartment third-section subsection">
-        <img className="apartmentImg" src={this.props.img} alt="#"/>
+        <section className="apartmentImg">
+          <i className="fa fa-heart"></i>
+          <img src={this.props.img} alt="#"/>
+        </section>
 
         <section className="apartmentInfo">
           <span>

@@ -1,5 +1,4 @@
 #dashboardContainer {
-  margin-top: 75px;
   background-color: $clouds;
 
   .container {
@@ -46,12 +45,12 @@
 
 #dashSubmit {
   width: 90%;
-  background-color: $emerald;
+  background-color: $coral;
   color: white;
   transition: .15s ease-in-out;
 
   &:hover {
-    background-color: darken($emerald, 6%);
+    background-color: darken($coral, 6%);
   }
 }
 
@@ -104,7 +103,7 @@
     font-weight: 700;
 
     &.isActive {
-      background-color: $emerald;
+      background-color: $coral;
 
       &:hover {
         background-color: $grey;
@@ -112,7 +111,7 @@
     }
 
     &:hover {
-      background-color: $emerald;
+      background-color: $coral;
     }
   }
 }
