@@ -9,7 +9,7 @@ function Navigation() {
     <nav id="mainNavigation" className="full-container">
       <div className="container">
         <Link to='/'><i className="fa fa-home"></i></Link>
-        <Link to='/register'>Register</Link>
+        <Link to='/dashboard'>Dashboard</Link>
       </div>
     </nav>
   )
