@@ -1,12 +1,17 @@
 #apartmentContainer {
-  justify-content: space-between;
-  padding-top: 0;
+  padding-top: 60px;
+  background-color: $clouds;
+
+  .container {
+    justify-content: space-between;
+    padding-top: 0;
+  }
 }
 
 .apartment {
   flex-direction: column;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-	width: calc(33% - 20px);
+	width: calc(33% - 10px);
+  box-shadow: 0 2px 4px rgba(black, 0.2);
 }
 
 .apartmentImg {
@@ -16,14 +21,27 @@
 .apartmentInfo {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  background-color: $clouds;
-  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  padding: 10px 0;
 
   span {
-    font-family: $Rale;
-    font-weight: 400;
+    font-weight: 300;
     text-align: left;
+    padding: 10px;
+    font-family: $Robo;
+    background-color: $clouds;
+    box-shadow: 0 1px 2px rgba(black, 0.2);
+
+    &:last-child {
+      margin-top: 10px;
+    }
+
+    i {
+      padding-right: 10px;
+      color: $grey;
+    }
   }
 }
 
@@ -31,4 +49,12 @@
   width: 100%;
   background-color: $emerald;
   color: $clouds;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    padding-left: 10px;
+    font-size: 18px;
+  }
 }

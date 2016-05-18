@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 input, button, textarea {
   border: none;
   box-shadow: none;
