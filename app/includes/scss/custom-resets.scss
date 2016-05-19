@@ -13,7 +13,7 @@ input, button, textarea {
   outline: none;
   padding: 10px 20px;
 
-  &:active {
+  &:active, &:focus {
     box-shadow: 0 1px 2px rgba(black, 0.2);
   }
 }
