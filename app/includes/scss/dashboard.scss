@@ -166,3 +166,26 @@
     margin: 1px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  #dashboardForm {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  #dashboardOverview {
+    width: 100%;
+  }
+
+  #overviewSelector {
+    width: 50%;
+    margin: 0 auto 20px auto;
+  }
+
+  #dashOverviewContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

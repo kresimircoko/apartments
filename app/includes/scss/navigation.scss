@@ -36,3 +36,15 @@
     font-size: 32px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  #mainNavigation {
+    .container {
+      padding: 10px 0;
+    }
+
+    a {
+      font-size: 18px;
+    }
+  }
+}
