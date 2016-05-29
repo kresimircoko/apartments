@@ -11,6 +11,7 @@ function Navigation() {
         <Link to='/'><i className="fa fa-home"></i></Link>
         <Link to='/dashboard'>Dashboard</Link>
         <Link to='/registration'>Register</Link>
+        <Link to='/apartment'>Apartment</Link>
       </div>
     </nav>
   )

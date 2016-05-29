@@ -11,6 +11,7 @@ var Home = require('../components/Home');
 var NavContainer = require('../containers/NavContainer');
 var RegisterContainer = require('../containers/RegisterContainer');
 var DashboardContainer = require('../containers/DashboardContainer');
+var SingleApartmentContainer = require('../containers/SingleApartmentContainer');
 
 var routes = (
   <Router history={hashHistory}>
@@ -18,6 +19,7 @@ var routes = (
       <IndexRoute component={Home} />
       <Route path='/registration' component={RegisterContainer} />
       <Route path='/dashboard' component={DashboardContainer} />
+      <Route path='/apartment' component={SingleApartmentContainer} />
     </Route>
   </Router>
 )
