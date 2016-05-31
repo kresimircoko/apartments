@@ -10,25 +10,23 @@ var ApartmentContainer = React.createClass({
       <div id="saContainer" className="full-container">
         <div id="saFeaturedImg"></div>
 
-      <i className="flaticon-arrows"></i>
-
         <section id="saFeaturedInfo" className="section-content">
           <div className="container">
             <div className="quarter-section subsection">
-              <i className="fa fa-money"></i>
-              <h3>Cijena</h3>
+              <i className="flaticon-money"></i>
+              <h3>678.00 kn</h3>
             </div>
             <div className="quarter-section subsection">
-              <i className="fa fa-group"></i>
-              <h3>Osoba</h3>
+              <i className="flaticon-people"></i>
+              <h3>2 Osobe</h3>
             </div>
             <div className="quarter-section subsection">
-              <i className="fa fa-bed"></i>
-              <h3>Spavaćih Soba</h3>
+              <i className="flaticon-home-1"></i>
+              <h3>1 Spavaća Soba</h3>
             </div>
             <div className="quarter-section subsection">
-              <i className="fa fa-expand"></i>
-              <h3>Kvadratura</h3>
+              <i className="flaticon-home"></i>
+              <h3>63 m<sup>2</sup></h3>
             </div>
           </div>
         </section>
@@ -37,13 +35,13 @@ var ApartmentContainer = React.createClass({
           <div className="container">
             <div className="half-section subsection">
               <h3>
-                <i className="fa fa-phone"></i>
+                <i className="flaticon-phone-call"></i>
                 091/187-3710
               </h3>
             </div>
             <div className="half-section subsection">
               <h3>
-                <i className="fa fa-envelope"></i>
+                <i className="flaticon-envelope"></i>
                 kresimircoko@gmail.com
               </h3>
             </div>
@@ -61,23 +59,17 @@ var ApartmentContainer = React.createClass({
         <section id="saSecondaryInfo" className="section-content">
           <div className="container">
             <h2 className="section-heading">Secondary Info</h2>
-            <ul className="third-section subsection">
-              <li>Placeholder</li>
-              <li>Placeholder</li>
-              <li>Placeholder</li>
-              <li>Placeholder</li>
+            <ul className="half-section subsection">
+              <li><i className="flaticon-wifi"></i><h3> Internet  </h3></li>
+              <li><i className="flaticon-stairs"></i><h3> 3. kat  </h3></li>
+              <li><h3>Balkon </h3></li>
+              <li><h3>Grijanje </h3></li>
             </ul>
-            <ul className="third-section subsection">
-              <li>Placeholder</li>
-              <li>Placeholder</li>
-              <li>Placeholder</li>
-              <li>Placeholder</li>
-            </ul>
-            <ul className="third-section subsection">
-              <li>Placeholder</li>
-              <li>Placeholder</li>
-              <li>Placeholder</li>
-              <li>Placeholder</li>
+            <ul className="half-section subsection">
+              <li><i className="flaticon-transport"></i><h3> 5 min  </h3></li>
+              <li><i className="flaticon-city"></i><h3> Zgrada  </h3></li>
+              <li><h3>Klima </h3></li>
+              <li><h3>MaxTV (ili slično) </h3></li>
             </ul>
           </div>
         </section>

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500|Coustard:400,900|Montserrat:400,700|Raleway:300,400,500,700|Open+Sans:400,300,600|Fira+Sans:400,300,500&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500|Coustard:400,900|Montserrat:400,700|Raleway:300,400,500,700|Open+Sans:400,300,600|Roboto+Slab:400,300|Fira+Sans:400,300,500&subset=latin,latin-ext);
 
 // Fonts
 $Rale : Raleway, sans-serif;
@@ -6,6 +6,7 @@ $Mont : Montserrat, sans-serif;
 $OS: Open Sans, sans-serif;
 $FS: Fira Sans, sans-serif;
 $Coustard: Coustard, serif;
+$Slab: Roboto Slab, serif;
 
 
 a, p, h1, h2, h3, h4, h5, h6, span, li, label {
@@ -14,9 +15,9 @@ a, p, h1, h2, h3, h4, h5, h6, span, li, label {
 }
 
 p {
-  font-family: $Coustard;
-  font-weight: 400;
-  color: $grey;
+  font-family: $Slab;
+  font-weight: 300;
+  color: $darkGrey;
 }
 
 html {
@@ -51,4 +52,11 @@ h3 {
 
 input, button {
   font-family: $Mont;
+}
+
+.section-heading {
+  font-family: $Mont;
+  text-transform: uppercase;
+  color: $coral;
+  margin-bottom: 60px;
 }

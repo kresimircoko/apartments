@@ -3,13 +3,6 @@
     flex-direction: column;
     margin: 0;
   }
-
-  .section-heading {
-    font-family: $Mont;
-    text-transform: uppercase;
-    color: $coral;
-    margin-bottom: 60px;
-  }
 }
 
 #saFeaturedImg {
@@ -25,7 +18,7 @@
 
 #saFeaturedInfo {
 
-  i {
+  i:before {
     font-size: 48px;
     margin-bottom: 10px;
     color: $coral;
@@ -47,14 +40,48 @@
     text-transform: lowercase;
   }
 
-  i {
+  i:before {
     padding-right: 20px;
     color: $coral;
+    font-size: 28px;
+  }
+}
+
+#saDescription {
+
+  p {
+    font-family: $Slab;
+    font-weight: 300;
   }
 }
 
 #saSecondaryInfo {
   background-color: $clouds;
+
+  ul {
+    list-style: none;
+    align-items: stretch;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 50%;
+    font-family: $Mont;
+    margin-bottom: 10px;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  i:before {
+    margin-left: 0;
+    padding-right: 20px;
+    color: $coral;
+    font-size: 1.17em;
+  }
 }
 
 #saCarousel {

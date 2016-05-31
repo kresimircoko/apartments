@@ -8,11 +8,8 @@ var heroBg = require('../includes/img/hero_beach.jpg');
 function DashboardOverview() {
   return (
     <div id="dashboardOverview" className="half-section">
-      <h3 id="overviewSelectorHeading" className="subsection">Vrste pogleda</h3>
-      <div id="overviewSelector" className="subsection">
-        <button className="third-section">Kompaktni</button>
-        <button className="third-section isActive">Opušteni</button>
-      </div>
+
+      <h3 className="subsection-heading">Pregled unesenih podataka</h3>
 
       <div id="dashOverviewContainer">
         <div className="overviewImg"></div>

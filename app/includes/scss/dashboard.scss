@@ -6,6 +6,28 @@
   }
 }
 
+.dbAddApartments {
+  padding-bottom: 0;
+
+  .subsection {
+    margin: 0;
+    background-color: $emerald;
+    box-shadow: 0 1px 2px rgba(black, 0.2);
+    padding: 0;
+  }
+
+  i {
+    color: $clouds;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 40px 20px;
+    color: $clouds;
+    text-align: center;
+  }
+}
+
 .dashboardWelcome {
   background-color: $whellow;
   color: $grey;
@@ -26,6 +48,10 @@
   width: 90%;
   display: flex;
   justify-content: space-between;
+
+  .subsection-heading {
+    text-align: center;
+  }
 }
 
 .dashInput {
@@ -40,6 +66,21 @@
 
   &:focus {
     box-shadow: 0 1px 2px rgba(black, 0.2);
+  }
+}
+
+.radioInnerContainer {
+
+  .dashInput {
+    width: auto;
+
+    &:focus {
+      box-shadow: 0 0 0 rgba(black, 0);
+    }
+  }
+
+  span {
+    padding-left: 10px;
   }
 }
 
@@ -77,23 +118,22 @@
   }
 }
 
+/* Dashboard Overview Styles */
+
 #dashboardOverview {
   display: flex;
   flex-direction: column;
-}
 
-#overviewSelectorHeading {
-  width: 100%;
-  text-align: center;
+  .subsection-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
 #overviewSelector {
   display: flex;
   justify-content: space-around;
-
-  h3 {
-    width: 100%;
-  }
 
   button {
     color: white;

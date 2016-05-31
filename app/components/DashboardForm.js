@@ -19,6 +19,30 @@ var DashboardForm = React.createClass({
         <DashFormInput
           actionType={'input'}
           type={'text'}
+          name={'name'}
+          placeholder={'Naziv stana'}
+          className={'dashInput subsection'}
+        />
+
+        <DashFormInput
+          actionType={'input'}
+          type={'text'}
+          name={'phone'}
+          placeholder={'Telefonski broj'}
+          className={'dashInput subsection'}
+        />
+
+        <DashFormInput
+          actionType={'input'}
+          type={'email'}
+          name={'email'}
+          placeholder={'Kontakt email'}
+          className={'dashInput subsection'}
+        />
+
+        <DashFormInput
+          actionType={'input'}
+          type={'text'}
           name={'address'}
           placeholder={'Adresa stana'}
           className={'dashInput subsection'}
@@ -55,6 +79,66 @@ var DashboardForm = React.createClass({
             name={'rooms'}
             placeholder={'Broj spavaćih soba'}
             className={'dashInput subsection smallInput'}
+          />
+        </div>
+
+        <div className="dashInputContainer">
+          <h3 className="subsection-heading half-section">Internet</h3>
+          <DashFormInput
+            actionType={'input'}
+            type={'radio'}
+            name={'internet'}
+            id={'internet-1'}
+            value={'Da'}
+            className={'dashInput'}
+          />
+          <DashFormInput
+            actionType={'input'}
+            type={'radio'}
+            name={'internet'}
+            id={'internet-2'}
+            value={'Ne'}
+            className={'dashInput'}
+          />
+        </div>
+
+        <div className="dashInputContainer">
+          <h3 className="subsection-heading half-section">Klima</h3>
+          <DashFormInput
+            actionType={'input'}
+            type={'radio'}
+            name={'klima'}
+            id={'klima-1'}
+            value={'Da'}
+            className={'dashInput'}
+          />
+          <DashFormInput
+            actionType={'input'}
+            type={'radio'}
+            name={'klima'}
+            id={'klima-2'}
+            value={'Ne'}
+            className={'dashInput'}
+          />
+        </div>
+
+        <div className="dashInputContainer">
+          <h3 className="subsection-heading half-section">Grijanje</h3>
+          <DashFormInput
+            actionType={'input'}
+            type={'radio'}
+            name={'grijanje'}
+            id={'grijanje-1'}
+            value={'Da'}
+            className={'dashInput'}
+          />
+          <DashFormInput
+            actionType={'input'}
+            type={'radio'}
+            name={'grijanje'}
+            id={'grijanje-2'}
+            value={'Ne'}
+            className={'dashInput'}
           />
         </div>
 
