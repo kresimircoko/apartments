@@ -48,7 +48,7 @@ var LoginForm = React.createClass({
         <button
           disabled={submitting}
           className="half-section" type="submit">
-          {submitting ? 'hue' : '#'} Submit
+          {submitting ? 'hue' : ''} Submit
         </button>
       </form>
     );

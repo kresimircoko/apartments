@@ -1,10 +1,10 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
-var Register = require('../components/Register')
+var Register = require('../components/Register');
 
 var RegisterContainer = React.createClass({
-  render: function() {
+  render() {
     return (
       <div id="registerContainer" class="full-container">
         <Register />
