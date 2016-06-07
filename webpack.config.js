@@ -24,6 +24,14 @@ module.exports = {
           'style', // backup loader when not building .css file
           'css?sourceMap!sass?sourceMap' // loaders to preprocess CSS
         )
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'file-loader?name=/includes/img/[name].[ext]'
+      },
+      {
+        test: /\.svg$/,
+        loader: 'file'
       }
     ]
   },
@@ -35,11 +43,7 @@ module.exports = {
     includePaths: ['client/style']
   },
   plugins: [
-<<<<<<< HEAD
-    new ExtractTextPlugin('[name].css'),
+    new ExtractTextPlugin('app.css'),
     HTMLWebpackPluginConfig
-=======
-    new ExtractTextPlugin('src/main.css')
->>>>>>> parent of 58c1d10... Minor Work Done
   ],
 };
