@@ -1,0 +1,20 @@
+@import "~normalize.css";
+@import "custom-resets";
+@import "colors";
+@import "typography";
+@import "layout";
+@import "navigation";
+@import "hero";
+@import "filter";
+@import "apartment";
+@import "dashboard";
+@import "register";
+@import "single-apartment";
+
+#appContainer {
+  flex-direction: column;
+}
+
+.separator {
+  margin: 0 10px;
+}

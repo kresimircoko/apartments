@@ -1,0 +1,231 @@
+#dashboardContainer {
+  background-color: $clouds;
+
+  .container {
+    justify-content: space-between;
+  }
+}
+
+.dbAddApartments {
+  padding-bottom: 0;
+
+  .subsection {
+    margin: 0;
+    background-color: $emerald;
+    box-shadow: 0 1px 2px rgba(black, 0.2);
+    padding: 0;
+  }
+
+  i {
+    color: $clouds;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 40px 20px;
+    color: $clouds;
+    text-align: center;
+  }
+}
+
+.dashboardWelcome {
+  background-color: $whellow;
+  color: $grey;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+#dashboardForm {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.dashInputContainer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+  .subsection-heading {
+    text-align: center;
+  }
+}
+
+.dashInput {
+  font-family: $Rale;
+  font-weight: 400;
+  width: 90%;
+
+  &.smallInput {
+    width: 48%;
+    display: inline-block;
+  }
+
+  &:focus {
+    box-shadow: 0 1px 2px rgba(black, 0.2);
+  }
+}
+
+.radioInnerContainer {
+
+  .dashInput {
+    width: auto;
+
+    &:focus {
+      box-shadow: 0 0 0 rgba(black, 0);
+    }
+  }
+
+  label {
+    padding-left: 10px;
+  }
+}
+
+#dashSubmit {
+  width: 90%;
+  background-color: $coral;
+  color: white;
+  transition: .15s ease-in-out;
+
+  &:hover {
+    background-color: darken($coral, 6%);
+  }
+}
+
+#dashFile {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+
+  + label {
+    color: white;
+    background-color: black;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &:focus + label,
+  + label:hover {
+    background-color: red;
+    outline: 1px dotted #000;
+	  outline: -webkit-focus-ring-color auto 5px;
+  }
+}
+
+/* Dashboard Overview Styles */
+
+#dashboardOverview {
+  display: flex;
+  flex-direction: column;
+
+  .subsection-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+#overviewSelector {
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    color: white;
+    background-color: $grey;
+    transition: background-color .3s ease-in-out;
+    font-family: $Rale;
+    font-weight: 700;
+
+    &.isActive {
+      background-color: $coral;
+
+      &:hover {
+        background-color: $grey;
+      }
+    }
+
+    &:hover {
+      background-color: $coral;
+    }
+  }
+}
+
+#dashOverviewContainer {
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(black, 0.2);
+
+  div {
+    display: flex;
+  }
+
+  span {
+    font-weight: 300;
+    font-family: $OS;
+    color: $grey;
+
+    i {
+      padding-right: 10px;
+      color: $darkGrey;
+    }
+  }
+}
+
+.overviewImg {
+  background-image: url('../img/hero_beach.jpg');
+  background-size: cover;
+  height: 300px;
+}
+
+.overviewPrimary {
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.overviewSecondary {
+  flex-direction: column;
+  padding: 10px 0;
+
+  span, p {
+    padding: 10px 20px;
+    margin-bottom: 0;
+  }
+}
+
+.overviewTertiary {
+  flex-wrap: wrap;
+
+  img {
+    width: calc(100% / 3 - 2px);
+    margin: 1px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #dashboardForm {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  #dashboardOverview {
+    width: 100%;
+  }
+
+  #overviewSelector {
+    width: 50%;
+    margin: 0 auto 20px auto;
+  }
+
+  #dashOverviewContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,54 @@
+#registerContainer {
+  background-color: $clouds;
+  min-height: calc(100vh - 77px);
+
+  .container {
+    padding: 120px 0;
+  }
+}
+
+#registerDescription {
+  li {
+    list-style: none;
+    color: $grey;
+    font-weight: 300;
+    font-size: 28px;
+    padding: 10px;
+
+    i {
+      font-family: FontAwesome;
+      padding: 10px;
+      color: $coral;
+    }
+  }
+}
+
+#registerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    font-family: $Rale;
+    font-weight: 400;
+  }
+
+  label {
+    width: 100%;
+    padding: 20px;
+    font-family: $Mont;
+    color: $lightGrey;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  button {
+    background-color: $coral;
+    color: white;
+  }
+}
+
+.registerHeading {
+  margin-bottom: 60px;
+}

@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500|Coustard:400,900|Montserrat:400,700|Raleway:300,400,500,700|Open+Sans:400,300,600|Roboto+Slab:400,300|Fira+Sans:400,300,500&subset=latin,latin-ext);
+
+// Fonts
+$Rale : Raleway, sans-serif;
+$Mont : Montserrat, sans-serif;
+$OS: Open Sans, sans-serif;
+$FS: Fira Sans, sans-serif;
+$Coustard: Coustard, serif;
+$Slab: Roboto Slab, serif;
+
+
+a, p, h1, h2, h3, h4, h5, h6, span, li, label {
+  color: $darkGrey;
+  font-family: $Rale;
+}
+
+p {
+  font-family: $Slab;
+  font-weight: 300;
+  color: $darkGrey;
+}
+
+html {
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.5;
+
+  @media (max-width: 900px) {
+    font-size: 20px;
+  }
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  line-height: 1.1;
+}
+
+h3 {
+  color: $lightGrey;
+  text-transform: uppercase;
+  font-family: $Mont;
+  font-weight: 700;
+}
+
+input, button {
+  font-family: $Mont;
+}
+
+.section-heading {
+  font-family: $Mont;
+  text-transform: uppercase;
+  color: $coral;
+  margin-bottom: 60px;
+}

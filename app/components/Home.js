@@ -1,16 +1,17 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
+var HeroContainer = require('../containers/HeroContainer');
+var FilterContainer = require('../containers/FilterContainer');
+var ApartmentContainer = require('../containers/ApartmentContainer');
 
 var Home = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Battle</h1>
-        <p>Some fancy motto</p>
-        <Link to='/playerOne'>
-          <button type='button'>Get Started</button>
-        </Link>
+        <HeroContainer />
+        <FilterContainer />
+        <ApartmentContainer />
       </div>
     )
   }

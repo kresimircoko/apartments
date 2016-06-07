@@ -1,0 +1,100 @@
+#saContainer {
+  .subsection {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+#saFeaturedImg {
+  width: 100%;
+  height: 60vh;
+  background-image:linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)),
+    url('../img/single-apartment.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#saFeaturedInfo {
+
+  i:before {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: $coral;
+  }
+}
+
+#saContactInfo {
+  background-color: $clouds;
+
+  .subsection {
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row;
+  }
+
+  h3 {
+    color: $grey;
+    margin: 0;
+    text-transform: lowercase;
+  }
+
+  i:before {
+    padding-right: 20px;
+    color: $coral;
+    font-size: 28px;
+  }
+}
+
+#saDescription {
+
+  p {
+    font-family: $Slab;
+    font-weight: 300;
+  }
+}
+
+#saSecondaryInfo {
+  background-color: $clouds;
+
+  ul {
+    list-style: none;
+    align-items: stretch;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 50%;
+    font-family: $Mont;
+    margin-bottom: 10px;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  i:before {
+    margin-left: 0;
+    padding-right: 20px;
+    color: $coral;
+    font-size: 1.17em;
+  }
+}
+
+#saCarousel {
+
+  .container {
+    padding: 30px 0;
+  }
+}
+
+.saCarouselImg {
+  object-fit: cover;
+}
+
+#saTertiaryInfo {
+  background-color: $clouds;
+}
