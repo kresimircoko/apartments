@@ -1,16 +1,15 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var Hero = require('../components/Hero');
+import React from 'react';
+import ReactRouter from 'react-router';
+import Hero from '../components/Hero';
 
-var HeroContainer = React.createClass({
-  render: function() {
+const HeroContainer = React.createClass({
+  render () {
     return (
-    <section id="heroContainer" className="full-container">
-      <Hero />
-    </section>
+      <section id="heroContainer" className="full-container">
+        <Hero />
+      </section>
     )
   }
 });
 
-module.exports = HeroContainer;
+export default HeroContainer;

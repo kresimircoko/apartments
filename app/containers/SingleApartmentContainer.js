@@ -1,8 +1,8 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var Apartment = require('../components/Apartment');
-var apBG = require('../includes/img/single-apartment.jpg');
+import React from 'react';
+import ReactRouter from 'react-router';
+import { Link } from 'react-router';
+import Apartment from '../components/Apartment';
+import apBG from '../includes/img/single-apartment.jpg';
 
 var ApartmentContainer = React.createClass({
   render() {
@@ -117,4 +117,4 @@ var ApartmentContainer = React.createClass({
   }
 });
 
-module.exports = ApartmentContainer;
+export default ApartmentContainer;

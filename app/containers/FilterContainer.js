@@ -1,10 +1,9 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var Filter = require('../components/Filter');
+import React from 'react';
+import ReactRouter from 'react-router';
+import Filter from '../components/Filter';
 
-var FilterContainer = React.createClass({
-  render: function() {
+const FilterContainer = React.createClass({
+  render () {
     return (
       <section id="filterContainer" className="container">
         <h2 id="filterHeading" className="full-section">FILTRIRAJ</h2>
@@ -33,4 +32,4 @@ var FilterContainer = React.createClass({
   }
 });
 
-module.exports = FilterContainer;
+export default FilterContainer;

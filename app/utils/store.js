@@ -1,15 +1,19 @@
-var store = require('React');
+import { createStore, compose } from 'redux';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { browserHistory } from 'react-router';
 
-const createStore = (reducer) => {
-  let state;
+import rootReducer from '../reducers/reducer';
 
-  const getState = () => state;
+// Placeholder data
+import apartments from '../data/data';
 
-  const dispatch = (action) => {
-
-  };
-
-  return { getState, dispatch, subscribe };
+// Object for the default data
+const defaultState = {
+  apartments
 }
 
-const store = createStore(counter);
+const store = createStore(rootReducer, defaultState);
+
+export const history = syncHistoryWithStore(browserHistory, store);
+
+export default store;

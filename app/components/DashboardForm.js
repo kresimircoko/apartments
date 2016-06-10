@@ -1,8 +1,8 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var heroBg = require('../includes/img/hero_beach.jpg');
-var DashFormInput = require('./DashFormInput');
+import React from 'react';
+import ReactRouter from 'react-router';
+import { Link } from 'react-router';
+import heroBg from '../includes/img/hero_beach.jpg';
+import DashFormInput from './DashFormInput';
 
 var DashboardForm = React.createClass({
   handleSubmit(event) {
@@ -10,7 +10,7 @@ var DashboardForm = React.createClass({
     event.preventDefault();
     console.log("Form submitted");
   },
-  render: function() {
+  render () {
     return (
       <form
         onSubmit={this.handleSubmit}
@@ -166,4 +166,4 @@ var DashboardForm = React.createClass({
   }
 });
 
-module.exports = DashboardForm;
+export default DashboardForm;

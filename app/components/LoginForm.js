@@ -21,7 +21,7 @@ var LoginForm = React.createClass({
     console.log({props});
   },
 
-  render: function() {
+  render () {
     const {
       fields: { email, password },
       handleSubmit,
@@ -67,4 +67,4 @@ LoginForm = reduxForm({
   validate
 })(LoginForm);
 
-module.exports = LoginForm;
+export default LoginForm;

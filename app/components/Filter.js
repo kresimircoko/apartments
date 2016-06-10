@@ -9,7 +9,7 @@ var Filter = React.createClass({
       name: ''
     };
   },
-  render: function() {
+  render () {
     return (
       <div className="filterCloud quarter-section">
         <h3>{this.props.name}</h3>
@@ -23,4 +23,4 @@ var Filter = React.createClass({
   }
 });
 
-module.exports = Filter;
+export default Filter;

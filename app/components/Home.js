@@ -1,12 +1,11 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var HeroContainer = require('../containers/HeroContainer');
-var FilterContainer = require('../containers/FilterContainer');
-var ApartmentContainer = require('../containers/ApartmentContainer');
+import React from 'react';
+import ReactRouter from 'react-router';
+import HeroContainer from '../containers/HeroContainer';
+import FilterContainer from '../containers/FilterContainer';
+import ApartmentContainer from '../containers/ApartmentContainer';
 
 var Home = React.createClass({
-  render: function() {
+  render () {
     return (
       <div>
         <HeroContainer />
@@ -17,4 +16,4 @@ var Home = React.createClass({
   }
 });
 
-module.exports = Home;
+export default Home;

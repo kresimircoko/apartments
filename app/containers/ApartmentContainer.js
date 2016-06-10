@@ -1,14 +1,23 @@
 // Parent of Apartment
 
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var Apartment = require('../components/Apartment');
+import React from 'react';
+import ReactRouter from 'react-router';
+import { Link } from 'react-router';
+import Apartment from '../components/Apartment';
+import Test from '../components/Test';
 
-var ApartmentContainer = React.createClass({
-  render: function() {
+const ApartmentContainer = React.createClass({
+  render () {
+
     return (
       <div id="apartmentContainer" className="full-container">
+
+        <div className="test">
+          {this.props.apartments.map(
+            (apartment, i) => <Test {...this.props} key={i} i={i} apartment={apartment} />
+          )}
+        </div>
+
         <div className="container">
           <Apartment
             img={'http://www.hotel-r.net/im/hotel/am/apartments-21.jpg'}
@@ -64,4 +73,4 @@ var ApartmentContainer = React.createClass({
   }
 });
 
-module.exports = ApartmentContainer;
+export default ApartmentContainer;

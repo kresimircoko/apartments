@@ -1,17 +1,16 @@
-var React = require('react');
-var NavContainer = require('../containers/NavContainer');
-var ApartmentContainer = require('../containers/ApartmentContainer');
-var FilterContainer = require('../containers/FilterContainer');
+import React from 'react';
+import NavContainer from '../containers/NavContainer';
+import { Link } from 'react-router';
 
 var Main = React.createClass({
-  render: function() {
+  render () {
     return (
       <div id='appContainer' className="full-container">
         <NavContainer />
-        {this.props.children}
+        {React.cloneElement(this.props.children, this.props)}
       </div>
     )
   }
 });
 
-module.exports = Main;
+export default Main;

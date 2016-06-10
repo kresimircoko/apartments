@@ -55,4 +55,4 @@ function DashboardOverview() {
   )
 };
 
-module.exports = DashboardOverview;
+export default DashboardOverview;

@@ -1,7 +1,7 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var Register = require('../components/Register');
+import React from 'react';
+import ReactRouter from 'react-router';
+import { Link } from 'react-router';
+import Register from '../components/Register';
 
 var RegisterContainer = React.createClass({
   render() {
@@ -13,4 +13,4 @@ var RegisterContainer = React.createClass({
   }
 });
 
-module.exports = RegisterContainer;
+export default RegisterContainer;

@@ -18,7 +18,7 @@ var DashFormInput = React.createClass({
   handleChange: function(event) {
     this.setState({value: event.target.value});
   },
-  render: function() {
+  render () {
     if(this.props.actionType=="input" && this.props.type!="radio") {
       return (
         <input
@@ -72,4 +72,4 @@ DashFormInput.propTypes = {
   id: PropTypes.string
 }
 
-module.exports = DashFormInput;
+export default DashFormInput;

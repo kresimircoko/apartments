@@ -15,7 +15,7 @@ var Apartment = React.createClass({
       route: ''
     }
   },
-  render: function() {
+  render () {
     return (
       <div className="apartment third-section subsection">
         <section className="apartmentImg">
@@ -44,4 +44,4 @@ var Apartment = React.createClass({
   }
 });
 
-module.exports = Apartment;
+export default Apartment;

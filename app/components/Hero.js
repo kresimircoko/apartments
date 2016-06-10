@@ -1,6 +1,6 @@
-var React = require('react');
-var LoginForm = require('./LoginForm');
-var heroBg = require('../includes/img/hero_beach.jpg');
+import React from 'react';
+import LoginForm from './LoginForm';
+import heroBg from '../includes/img/hero_beach.jpg';
 
 function Hero() {
   return (
@@ -12,4 +12,4 @@ function Hero() {
   )
 };
 
-module.exports = Hero;
+export default Hero;

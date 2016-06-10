@@ -6,7 +6,9 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
 module.exports = {
+  devtool: 'source-map',
   entry: './app/index.js',
   module: {
     loaders: [

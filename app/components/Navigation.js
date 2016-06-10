@@ -1,8 +1,7 @@
 // Child of NavContainer
 
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
+import React from 'react';
+import ReactRouter, { Link } from 'react-router';
 
 function Navigation() {
   return (
@@ -12,9 +11,10 @@ function Navigation() {
         <Link to='/dashboard'>Dashboard</Link>
         <Link to='/registration'>Register</Link>
         <Link to='/apartment'>Apartment</Link>
+        <Link to='/photos'>Photos</Link>
       </div>
     </nav>
   )
 };
 
-module.exports = Navigation;
+export default Navigation;

@@ -1,11 +1,11 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var DashboardForm = require('../components/DashboardForm');
-var DashboardOverview = require('../components/DashboardOverview');
+import React from 'react';
+import ReactRouter from 'react-router';
+import { Link } from 'react-router';
+import DashboardForm from '../components/DashboardForm';
+import DashboardOverview from '../components/DashboardOverview';
 
 var DashboardContainer = React.createClass({
-  render: function() {
+  render () {
     return (
       <section id="dashboardContainer" className="full-container">
         <section className="container dbAddApartments">
@@ -25,4 +25,4 @@ var DashboardContainer = React.createClass({
   }
 });
 
-module.exports = DashboardContainer;
+export default DashboardContainer;

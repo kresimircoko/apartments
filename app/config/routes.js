@@ -1,21 +1,20 @@
-var React = require('react');
-var ReactRouter = require('react-router');
+import React from 'react';
 
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
-var IndexRoute = ReactRouter.IndexRoute;
-var hashHistory = ReactRouter.hashHistory;
+import { Router, ReactRouter, Route, IndexRoute, browserHistory } from 'react-router';
+import { history } from '../utils/store';
+import { Link } from 'react-router';
 
-var Main = require('../components/Main');
-var Home = require('../components/Home');
-var NavContainer = require('../containers/NavContainer');
-var RegisterContainer = require('../containers/RegisterContainer');
-var DashboardContainer = require('../containers/DashboardContainer');
-var SingleApartmentContainer = require('../containers/SingleApartmentContainer');
+import App from '../components/App';
+import Home from '../components/Home';
+import NavContainer from '../containers/NavContainer';
+import RegisterContainer from '../containers/RegisterContainer';
+import DashboardContainer from '../containers/DashboardContainer';
+import SingleApartmentContainer from '../containers/SingleApartmentContainer';
 
-var routes = (
-  <Router history={hashHistory}>
-    <Route path='/' component={Main}>
+
+const routes = (
+  <Router history={history}>
+    <Route path='/' component={App}>
       <IndexRoute component={Home} />
       <Route path='/registration' component={RegisterContainer} />
       <Route path='/dashboard' component={DashboardContainer} />
@@ -24,4 +23,4 @@ var routes = (
   </Router>
 )
 
-module.exports = routes;
+export default routes;
