@@ -1,8 +1,8 @@
-// increment
-export function increment(index) {
+// Add a new apartment
+export function addApartment(index) {
   return {
-    type: 'INCREMENT_LIKES',
-    index
+    type: 'ADD_APARTMENT',
+    index    
   }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactRouter from 'react-router';
+import { ReactRouter, Link } from 'react-router';
 import Filter from '../components/Filter';
 
 const FilterContainer = React.createClass({

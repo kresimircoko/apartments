@@ -1,15 +1,13 @@
 import React from 'react';
-
 import { Router, ReactRouter, Route, IndexRoute, browserHistory } from 'react-router';
 import { history } from '../utils/store';
-import { Link } from 'react-router';
 
 import App from '../components/App';
 import Home from '../components/Home';
 import NavContainer from '../containers/NavContainer';
 import RegisterContainer from '../containers/RegisterContainer';
 import DashboardContainer from '../containers/DashboardContainer';
-import SingleApartmentContainer from '../containers/SingleApartmentContainer';
+import SingleApartment from '../components/SingleApartment';
 
 
 const routes = (
@@ -18,7 +16,7 @@ const routes = (
       <IndexRoute component={Home} />
       <Route path='/registration' component={RegisterContainer} />
       <Route path='/dashboard' component={DashboardContainer} />
-      <Route path='/apartment' component={SingleApartmentContainer} />
+      <Route path='/apartment/:apartmentId' component={SingleApartment} />
     </Route>
   </Router>
 )

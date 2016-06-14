@@ -10,6 +10,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   devtool: 'source-map',
   entry: './app/index.js',
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     loaders: [
       {

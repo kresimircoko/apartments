@@ -389,13 +389,13 @@ button {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
 
 a, p, h1, h2, h3, h4, h5, h6, span, li, label {
-  color: #333;
+  color: #212121;
   font-family: Raleway, sans-serif; }
 
 p {
   font-family: Roboto Slab, serif;
   font-weight: 300;
-  color: #333; }
+  color: #212121; }
 
 html {
   font-size: 24px;
@@ -417,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1; }
 
 h3 {
-  color: #A3A4A4;
+  color: #727272;
   text-transform: uppercase;
   font-family: Montserrat, sans-serif;
   font-weight: 700; }
@@ -428,7 +428,7 @@ input, button {
 .section-heading {
   font-family: Montserrat, sans-serif;
   text-transform: uppercase;
-  color: #FF7F50;
+  color: #FF5722;
   margin-bottom: 60px; }
 
 .main-section {
@@ -503,7 +503,7 @@ input, button {
 #mainNavigation {
   display: flex;
   margin: 0 auto;
-  background-color: #FF7F50; }
+  background-color: #FF5722; }
   #mainNavigation .container {
     padding: 20px 0;
     justify-content: space-around; }
@@ -514,7 +514,7 @@ input, button {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 300;
-    color: #ecf0f1;
+    color: #FFFFFF;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
   #mainNavigation i:before {
     font-size: 23px; }
@@ -540,11 +540,11 @@ input, button {
   padding: 140px 0; }
 
 #heroHeading {
-  color: #ecf0f1;
+  color: #FFFFFF;
   font-size: 64px; }
 
 #heroDescription {
-  color: #ecf0f1; }
+  color: #FFFFFF; }
 
 #heroLogin {
   display: flex;
@@ -553,16 +553,14 @@ input, button {
   align-items: center; }
   #heroLogin input, #heroLogin button {
     background-color: rgba(255, 255, 255, 0.6);
-    color: white;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+    color: #FFFFFF; }
   #heroLogin button {
-    background-color: #FF7F50;
-    color: #ecf0f1;
+    background-color: #FF5722;
+    color: #FFFFFF;
     text-shadow: none;
     transition: .3s ease-in-out; }
     #heroLogin button:hover {
-      background-color: #ff6c37;
-      color: #333; }
+      background-color: #E64A19; }
 
 .loginError {
   color: #e81c4f;
@@ -582,20 +580,23 @@ input, button {
 
 #filterHeading {
   text-align: center;
-  color: #7D7D7D;
+  color: #727272;
   font-family: Montserrat, sans-serif;
   margin-bottom: 40px; }
 
 .filterCloud {
   list-style: none; }
   .filterCloud h3 {
-    text-align: center; }
+    text-align: center;
+    color: #727272; }
   .filterCloud ul {
     margin-bottom: 0; }
   .filterCloud li {
     display: inline-block;
     padding: 10px;
-    background-color: #FFEDA6;
+    background-color: #00BCD4;
+    color: #FFFFFF;
+    font-weight: 400;
     margin: 0 4px 4px 0;
     min-width: 30%;
     text-align: center;
@@ -614,7 +615,7 @@ input, button {
 
 #apartmentContainer {
   padding-top: 60px;
-  background-color: #ecf0f1; }
+  background-color: #E3E3E3; }
   #apartmentContainer .container {
     justify-content: space-between;
     padding-top: 0; }
@@ -622,7 +623,7 @@ input, button {
 .apartment {
   flex-direction: column;
   width: calc(33% - 10px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
 
 .apartmentImg {
   display: flex;
@@ -653,29 +654,25 @@ input, button {
   background-color: white;
   padding: 20px 0; }
   .apartmentInfo span {
-    font-weight: 300;
-    text-align: left;
-    padding: 10px;
-    font-family: Open Sans, sans-serif;
-    background-color: #ecf0f1;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-    .apartmentInfo span:last-child {
-      margin-top: 10px; }
+    padding: 10px; }
     .apartmentInfo span i {
       padding-right: 10px;
-      color: #7D7D7D;
+      color: #00BCD4;
       font-size: 21px; }
 
 .apartmentDetailsBtn {
   width: 100%;
-  background-color: #FF7F50;
-  color: #ecf0f1;
+  background-color: #FF5722;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  transition: .3s ease-in-out; }
   .apartmentDetailsBtn i {
     padding-left: 10px;
     font-size: 18px; }
+  .apartmentDetailsBtn:hover {
+    background-color: #E64A19; }
 
 @media screen and (max-width: 768px) {
   #apartmentContainer .container {
@@ -690,7 +687,7 @@ input, button {
     display: block; } }
 
 #dashboardContainer {
-  background-color: #ecf0f1; }
+  background-color: #E3E3E3; }
   #dashboardContainer .container {
     justify-content: space-between; }
 
@@ -702,16 +699,16 @@ input, button {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     padding: 0; }
   .dbAddApartments i {
-    color: #ecf0f1; }
+    color: #FFFFFF; }
   .dbAddApartments h3 {
     margin: 0;
     padding: 40px 20px;
-    color: #ecf0f1;
+    color: #FFFFFF;
     text-align: center; }
 
 .dashboardWelcome {
-  background-color: #FFEDA6;
-  color: #7D7D7D;
+  background-color: #00BCD4;
+  color: #727272;
   width: 100%;
   padding: 20px;
   text-align: center;
@@ -750,11 +747,11 @@ input, button {
 
 #dashSubmit {
   width: 90%;
-  background-color: #FF7F50;
+  background-color: #FF5722;
   color: white;
   transition: .15s ease-in-out; }
   #dashSubmit:hover {
-    background-color: #ff6931; }
+    background-color: #ff4003; }
 
 #dashFile {
   width: 0.1px;
@@ -771,7 +768,7 @@ input, button {
   #dashFile:focus + label,
   #dashFile + label:hover {
     background-color: red;
-    outline: 1px dotted #000;
+    outline: 1px dotted black;
     outline: -webkit-focus-ring-color auto 5px; }
 
 /* Dashboard Overview Styles */
@@ -788,16 +785,16 @@ input, button {
   justify-content: space-around; }
   #overviewSelector button {
     color: white;
-    background-color: #7D7D7D;
+    background-color: #727272;
     transition: background-color .3s ease-in-out;
     font-family: Raleway, sans-serif;
     font-weight: 700; }
     #overviewSelector button.isActive {
-      background-color: #FF7F50; }
+      background-color: #FF5722; }
       #overviewSelector button.isActive:hover {
-        background-color: #7D7D7D; }
+        background-color: #727272; }
     #overviewSelector button:hover {
-      background-color: #FF7F50; }
+      background-color: #FF5722; }
 
 #dashOverviewContainer {
   flex-direction: column;
@@ -808,10 +805,10 @@ input, button {
   #dashOverviewContainer span {
     font-weight: 300;
     font-family: Open Sans, sans-serif;
-    color: #7D7D7D; }
+    color: #727272; }
     #dashOverviewContainer span i {
       padding-right: 10px;
-      color: #333; }
+      color: #727272; }
 
 .overviewImg {
   background-image: url(/includes/img/hero_beach.jpg);
@@ -851,14 +848,14 @@ input, button {
     margin: 0 auto; } }
 
 #registerContainer {
-  background-color: #ecf0f1;
+  background-color: #FFFFFF;
   min-height: calc(100vh - 77px); }
   #registerContainer .container {
     padding: 120px 0; }
 
 #registerDescription li {
   list-style: none;
-  color: #7D7D7D;
+  color: #727272;
   font-weight: 300;
   font-size: 28px;
   padding: 10px; }
@@ -879,11 +876,11 @@ input, button {
     width: 100%;
     padding: 20px;
     font-family: Montserrat, sans-serif;
-    color: #A3A4A4;
+    color: #FFFFFF;
     font-weight: 600;
     text-transform: uppercase; }
   #registerForm button {
-    background-color: #FF7F50;
+    background-color: #FF5722;
     color: white; }
 
 .registerHeading {
@@ -903,21 +900,21 @@ input, button {
 #saFeaturedInfo i:before {
   font-size: 48px;
   margin-bottom: 10px;
-  color: #FF7F50; }
+  color: #FF5722; }
 
 #saContactInfo {
-  background-color: #ecf0f1; }
+  background-color: #FFFFFF; }
   #saContactInfo .subsection {
     justify-content: center;
     align-items: baseline;
     flex-direction: row; }
   #saContactInfo h3 {
-    color: #7D7D7D;
+    color: #727272;
     margin: 0;
     text-transform: lowercase; }
   #saContactInfo i:before {
     padding-right: 20px;
-    color: #FF7F50;
+    color: #FF5722;
     font-size: 28px; }
 
 #saDescription p {
@@ -925,7 +922,7 @@ input, button {
   font-weight: 300; }
 
 #saSecondaryInfo {
-  background-color: #ecf0f1; }
+  background-color: #FFFFFF; }
   #saSecondaryInfo ul {
     list-style: none;
     align-items: stretch; }
@@ -941,7 +938,7 @@ input, button {
   #saSecondaryInfo i:before {
     margin-left: 0;
     padding-right: 20px;
-    color: #FF7F50;
+    color: #FF5722;
     font-size: 1.17em; }
 
 #saCarousel .container {
@@ -951,7 +948,7 @@ input, button {
   object-fit: cover; }
 
 #saTertiaryInfo {
-  background-color: #ecf0f1; }
+  background-color: #FFFFFF; }
 
 #appContainer {
   flex-direction: column; }

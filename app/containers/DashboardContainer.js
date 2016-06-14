@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactRouter from 'react-router';
-import { Link } from 'react-router';
+import { ReactRouter, Link } from 'react-router';
 import DashboardForm from '../components/DashboardForm';
 import DashboardOverview from '../components/DashboardOverview';
 

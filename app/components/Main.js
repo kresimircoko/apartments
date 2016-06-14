@@ -1,6 +1,6 @@
 import React from 'react';
+import { ReactRouter, Link } from 'react-router';
 import NavContainer from '../containers/NavContainer';
-import { Link } from 'react-router';
 
 var Main = React.createClass({
   render () {

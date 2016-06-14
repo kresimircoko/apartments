@@ -1,44 +1,32 @@
 // Child of ApartmentContainer
 
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
+import React from 'react';
+import { Link } from 'react-router';
 
 var Apartment = React.createClass({
-  getDefaultProps: function() {
-    return {
-      img: '',
-      price: '',
-      neighborhood: '',
-      size: '',
-      people: '',
-      route: ''
-    }
-  },
   render () {
+    const { apartment, i } = this.props;
     return (
       <div className="apartment third-section subsection">
-        <section className="apartmentImg">
-          <i className="fa fa-heart"></i>
-          <img src={this.props.img} alt="#"/>
-        </section>
+        <img src={apartment.img} alt={apartment.address} className="apartmentImg" />
 
         <section className="apartmentInfo">
           <span>
-            <i className="fa fa-money"></i> {this.props.price} kn
+            <i className="fa fa-money"></i> {apartment.price}
           </span>
           <span>
-            <i className="fa fa-group"></i> {this.props.people}
+            <i className="fa fa-group"></i> {apartment.people}
           </span>
           <span>
-            <i className="fa fa-expand"></i> {this.props.size} m&sup2;
+            <i className="fa fa-expand"></i> {apartment.scale}m&sup2;
             </span>
           <span>
-            <i className="fa fa-map-marker"></i> {this.props.neighborhood}
+            <i className="fa fa-map-marker"></i> {apartment.neighborhood}
           </span>
         </section>
-
-        <button href={this.props.route} className="apartmentDetailsBtn" type="button">Detalji <i className="fa fa-chevron-right"></i> </button>
+        <Link to={`/apartment/${apartment.route}`} className="apartmentDetailsBtn"> 
+          Detalji <i className="fa fa-chevron-right"></i>
+        </Link>
       </div>
     )
   }

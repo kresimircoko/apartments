@@ -1,7 +1,5 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var PropTypes = React.PropTypes;
-var Link = ReactRouter.Link;
+import React, { PropTypes } from 'react';
+import { ReactRouter, Link } from 'react-router';
 
 var DashFormInput = React.createClass({
   getInitialState: function() {

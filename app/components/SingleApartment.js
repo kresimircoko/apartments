@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import Apartment from '../components/Apartment';
-import apBG from '../includes/img/single-apartment.jpg';
 
-var ApartmentContainer = React.createClass({
-  render() {
+const SingleApartment = React.createClass({
+  render () {
     return (
       <div id="saContainer" className="full-container">
         <div id="saFeaturedImg"></div>
@@ -114,6 +112,6 @@ var ApartmentContainer = React.createClass({
       </div>
     )
   }
-});
+})
 
-export default ApartmentContainer;
+export default SingleApartment;

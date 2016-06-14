@@ -21,12 +21,12 @@
   i:before {
     font-size: 48px;
     margin-bottom: 10px;
-    color: $coral;
+    color: $primary-color;
   }
 }
 
 #saContactInfo {
-  background-color: $clouds;
+  background-color: $divider-color-light;
 
   .subsection {
     justify-content: center;
@@ -35,14 +35,14 @@
   }
 
   h3 {
-    color: $grey;
+    color: $secondary-text-color;
     margin: 0;
     text-transform: lowercase;
   }
 
   i:before {
     padding-right: 20px;
-    color: $coral;
+    color: $primary-color;
     font-size: 28px;
   }
 }
@@ -56,7 +56,7 @@
 }
 
 #saSecondaryInfo {
-  background-color: $clouds;
+  background-color: $divider-color-light;
 
   ul {
     list-style: none;
@@ -79,7 +79,7 @@
   i:before {
     margin-left: 0;
     padding-right: 20px;
-    color: $coral;
+    color: $primary-color;
     font-size: 1.17em;
   }
 }
@@ -96,5 +96,5 @@
 }
 
 #saTertiaryInfo {
-  background-color: $clouds;
+  background-color: $divider-color-light;
 }

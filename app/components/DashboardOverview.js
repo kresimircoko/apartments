@@ -1,9 +1,8 @@
 // Child of ApartmentContainer
 
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var heroBg = require('../includes/img/hero_beach.jpg');
+import React from 'react';
+import { ReactRouter, Link } from 'react-router';
+import heroBg from '../includes/img/hero_beach.jpg';
 
 function DashboardOverview() {
   return (

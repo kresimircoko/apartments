@@ -10,14 +10,14 @@ $Slab: Roboto Slab, serif;
 
 
 a, p, h1, h2, h3, h4, h5, h6, span, li, label {
-  color: $darkGrey;
+  color: $primary-text-color;
   font-family: $Rale;
 }
 
 p {
   font-family: $Slab;
   font-weight: 300;
-  color: $darkGrey;
+  color: $primary-text-color;
 }
 
 html {
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h3 {
-  color: $lightGrey;
+  color: $secondary-text-color;
   text-transform: uppercase;
   font-family: $Mont;
   font-weight: 700;
@@ -57,6 +57,6 @@ input, button {
 .section-heading {
   font-family: $Mont;
   text-transform: uppercase;
-  color: $coral;
+  color: $primary-color;
   margin-bottom: 60px;
 }

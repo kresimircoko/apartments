@@ -1,5 +1,5 @@
 #dashboardContainer {
-  background-color: $clouds;
+  background-color: $divider-color-light;
 
   .container {
     justify-content: space-between;
@@ -7,34 +7,32 @@
 }
 
 .dbAddApartments {
-  padding-bottom: 0;
 
   .subsection {
     margin: 0;
-    background-color: $emerald;
+    background-color: $accent-color;
     box-shadow: 0 1px 2px rgba(black, 0.2);
     padding: 0;
   }
 
   i {
-    color: $clouds;
+    color: $primary-color-text;
   }
 
   h3 {
     margin: 0;
     padding: 40px 20px;
-    color: $clouds;
+    color: $primary-color-text;
     text-align: center;
   }
 }
 
 .dashboardWelcome {
-  background-color: $whellow;
-  color: $grey;
+  background-color: $accent-color;
+  color: $primary-color-text;
   width: 100%;
   padding: 20px;
   text-align: center;
-  margin-top: 60px;
   margin-bottom: 0;
 }
 
@@ -86,12 +84,12 @@
 
 #dashSubmit {
   width: 90%;
-  background-color: $coral;
+  background-color: $primary-color;
   color: white;
   transition: .15s ease-in-out;
 
   &:hover {
-    background-color: darken($coral, 6%);
+    background-color: darken($primary-color, 6%);
   }
 }
 
@@ -113,7 +111,7 @@
   &:focus + label,
   + label:hover {
     background-color: red;
-    outline: 1px dotted #000;
+    outline: 1px dotted black;
 	  outline: -webkit-focus-ring-color auto 5px;
   }
 }
@@ -137,21 +135,21 @@
 
   button {
     color: white;
-    background-color: $grey;
+    background-color: $secondary-text-color;
     transition: background-color .3s ease-in-out;
     font-family: $Rale;
     font-weight: 700;
 
     &.isActive {
-      background-color: $coral;
+      background-color: $primary-color;
 
       &:hover {
-        background-color: $grey;
+        background-color: $secondary-text-color;
       }
     }
 
     &:hover {
-      background-color: $coral;
+      background-color: $primary-color;
     }
   }
 }
@@ -168,11 +166,11 @@
   span {
     font-weight: 300;
     font-family: $OS;
-    color: $grey;
+    color: $secondary-text-color;
 
     i {
       padding-right: 10px;
-      color: $darkGrey;
+      color: $secondary-text-color;
     }
   }
 }
