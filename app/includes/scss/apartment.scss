@@ -69,12 +69,14 @@
 
 .apartmentDetailsBtn {
   width: 100%;
+  padding: 10px;
   background-color: $primary-color;
   color: $primary-color-text;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: .3s ease-in-out;
+  text-decoration: none;
 
   i {
     padding-left: 10px;
