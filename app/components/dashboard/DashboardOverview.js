@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ReactRouter, Link } from 'react-router';
-import heroBg from '../includes/img/hero_beach.jpg';
+import heroBg from '../../includes/img/hero_beach.jpg';
 
 function DashboardOverview() {
   return (

@@ -30,3 +30,22 @@ button {
     box-shadow: 0 1px 2px rgba(black, 0.2);
   }
 }
+
+figure {
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+figcaption {
+  background-color: $accent-color;
+  color: $primary-color-text;
+  width: 100%;
+  text-align: center;
+  font-family: $Rale;
+  font-weight: 300;
+  font-size: 21px;
+}

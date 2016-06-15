@@ -1,100 +1,146 @@
-#saContainer {
-  .subsection {
-    flex-direction: column;
+#singleHero {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .container {
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px; left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+  }
+}
+
+.apartmentHeroInfo {
+  background-color: $primary-color-dark;
+  color: $primary-color-text;
+  box-shadow: 0 1px 2px rgba(black, 0.1);
+  padding: 10px 20px;
+  width: 20%;
+  text-align: center;
+}
+
+.primaryInfo {
+  margin: 0;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    font-family: $Slab;
+    text-transform: capitalize;
+  }
+
+  i:before {
+    margin: 0;
+    padding-right: 20px;
+    font-size: 1.5em;
+    color: $accent-color;
+  }
+
+  &:nth-child(2) {
+    justify-content: space-around;
+  }
+}
+
+#singleContact {
+  display: flex;
+  padding: 60px 0;
+  flex-direction: column;
+  background-color: $divider-color-dark;
+
+  .container {
+    padding: 0;
+  }
+}
+
+#ownerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  h3 {
+    color: $accent-color;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border: 6px solid $accent-color;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+
+  .half-section {
+    align-items: baseline;
+    font-family: $Mont;
+    letter-spacing: -1px;
+    margin: 20px 0 0 0;
+    color: $primary-color-text;
+
+    i:before {
+      font-size: 32px;
+      margin: 0;
+      padding-right: 20px;
+      color: $accent-color;
+    }
+  }
+}
+
+#singleDescription {
+  p {
     margin: 0;
   }
 }
 
-#saFeaturedImg {
-  width: 100%;
-  height: 60vh;
-  background-image:linear-gradient(
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0.3)),
-    url('../img/single-apartment.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-#saFeaturedInfo {
-
-  i:before {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: $primary-color;
-  }
-}
-
-#saContactInfo {
+#singleSecondary {
   background-color: $divider-color-light;
+}
+
+.secondaryInfo {
+  padding-bottom: 60px;
 
   .subsection {
-    justify-content: center;
-    align-items: baseline;
-    flex-direction: row;
+    margin: 0;
   }
 
   h3 {
-    color: $secondary-text-color;
-    margin: 0;
-    text-transform: lowercase;
+    display: flex;
+    flex-direction: column;
   }
 
   i:before {
-    padding-right: 20px;
-    color: $primary-color;
-    font-size: 28px;
+    margin: 0;
+    font-size: 38px;
+    color: $accent-color;
   }
 }
 
-#saDescription {
+.singleGallery {
+  figure {
+    margin-bottom: 7px;
+    flex-direction: column;
+    box-shadow: 0 1px 2px rgba(black, 0.3);
 
-  p {
-    font-family: $Slab;
-    font-weight: 300;
-  }
-}
+    img {
+      height: 250px;
+    }
 
-#saSecondaryInfo {
-  background-color: $divider-color-light;
-
-  ul {
-    list-style: none;
-    align-items: stretch;
-  }
-
-  li {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    width: 50%;
-    font-family: $Mont;
-    margin-bottom: 10px;
-
-    h3 {
-      margin: 0;
+    figcaption {
+      padding: 8px;
+      background-color: $primary-color;
     }
   }
-
-  i:before {
-    margin-left: 0;
-    padding-right: 20px;
-    color: $primary-color;
-    font-size: 1.17em;
-  }
-}
-
-#saCarousel {
-
-  .container {
-    padding: 30px 0;
-  }
-}
-
-.saCarouselImg {
-  object-fit: cover;
-}
-
-#saTertiaryInfo {
-  background-color: $divider-color-light;
 }

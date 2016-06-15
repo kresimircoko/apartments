@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ReactRouter, Link } from 'react-router';
-import Apartment from '../components/Apartment';
+import Apartment from '../components/hero/Apartment';
 
 const ApartmentContainer = React.createClass({
   render () {

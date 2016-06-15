@@ -7,7 +7,7 @@ import Home from '../components/Home';
 import NavContainer from '../containers/NavContainer';
 import RegisterContainer from '../containers/RegisterContainer';
 import DashboardContainer from '../containers/DashboardContainer';
-import SingleApartment from '../components/SingleApartment';
+import SingleApartmentContainer from '../containers/SingleApartmentContainer';
 
 
 const routes = (
@@ -16,7 +16,7 @@ const routes = (
       <IndexRoute component={Home} />
       <Route path='/registration' component={RegisterContainer} />
       <Route path='/dashboard' component={DashboardContainer} />
-      <Route path='/apartment/:apartmentId' component={SingleApartment} />
+      <Route path='/apartment/:apartmentId' component={SingleApartmentContainer} />
     </Route>
   </Router>
 )

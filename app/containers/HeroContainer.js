@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactRouter, Link } from 'react-router';
-import Hero from '../components/Hero';
+import Hero from '../components/hero/Hero';
 
 const HeroContainer = React.createClass({
   render () {

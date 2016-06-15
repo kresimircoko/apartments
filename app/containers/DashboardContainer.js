@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactRouter, Link } from 'react-router';
-import DashboardForm from '../components/DashboardForm';
-import DashboardOverview from '../components/DashboardOverview';
+import DashboardForm from '../components/dashboard/DashboardForm';
+import DashboardOverview from '../components/dashboard/DashboardOverview';
 
 var DashboardContainer = React.createClass({
   render () {

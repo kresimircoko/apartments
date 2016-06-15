@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactRouter, Link } from 'react-router';
-import Filter from '../components/Filter';
+import Filter from '../components/hero/Filter';
 
 const FilterContainer = React.createClass({
   render () {

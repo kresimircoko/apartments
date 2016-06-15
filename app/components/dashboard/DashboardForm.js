@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactRouter, Link } from 'react-router';
-import heroBg from '../includes/img/hero_beach.jpg';
+import heroBg from '../../includes/img/hero_beach.jpg';
 import DashFormInput from './DashFormInput';
 
 var DashboardForm = React.createClass({
