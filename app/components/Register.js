@@ -15,13 +15,11 @@ function Register() {
           <li><i className="fa-li fa-heart-o"></i> Bookmarkanje stanova</li>
           <li><i className="fa-li fa-clone"></i> Usporedba stanova</li>
           <li><i className="fa-li fa-comments-o"></i> Komentiranje stanova</li>
-          <li><i className="fa-li fa-check"></i> Placeholder</li>
-          <li><i className="fa-li fa-check"></i> placeholder</li>
         </ul>
       </section>
 
       <form id="registerForm" className="half-section">
-        <h1 className="registerHeading">Registrirajte se ovdje.</h1>
+        <h1 className="registerHeading">Registrirajte se ovdje</h1>
 
         <label htmlFor="email">Email</label>
         <input className="full-section subsection" name="email" type="text" placeholder="Unesite svoj email ..."/>

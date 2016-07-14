@@ -13,6 +13,12 @@
     background-color: $accent-color;
     box-shadow: 0 1px 2px rgba(black, 0.2);
     padding: 0;
+
+    &:hover {
+      background-color: $primary-color-dark;
+      transition: .15s ease-in-out;
+      cursor: pointer;
+    }
   }
 
   i {
@@ -205,7 +211,24 @@
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .dbAddApartments {
+    .subsection {
+      width: 33%;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
+
+  .dbAddApartments {
+    padding: 40px 5%;
+
+    .subsection {
+      width: 50%;
+    }
+  }
+
   #dashboardForm {
     width: 100%;
     justify-content: center;
@@ -225,5 +248,78 @@
   #dashOverviewContainer {
     width: 90%;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #dashboardContainer {
+
+    .container {
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+  }
+
+  .dbAddApartments {
+    width: calc(100% - 60px);
+
+    .subsection {
+      width: 100%;
+    }
+
+    h3 {
+      padding: 20px;
+    }
+  }
+
+  #dashboardForm {
+    width: calc(100% - 20px);
+  }
+
+  .dashInput {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .dashInputContainer {
+    width: 100%;
+
+    .subsection {
+      align-items: baseline;
+    }
+
+    .dashInput[type="radio"] {
+      margin: 0;
+    }
+  }
+
+  .radioInnerContainer {
+    margin-bottom: 10px;
+  }
+
+  #dashboardOverview {
+    width: calc(100% - 20px);
+  }
+
+  #dashOverviewContainer {
+    width: 100%;
+  }
+
+  .overviewTertiary {
+    img {
+      width: calc(33% - 5px);
+      height: 100px;
+      margin: 0 0 5px 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .dbAddApartments {
+    width: calc(100% - 20px);
+
+    h3 {
+      padding: 20px;
+    }
   }
 }

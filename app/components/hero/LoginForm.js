@@ -10,7 +10,7 @@ const validate = values => {
     errors.email = 'Pogrešan email'
   }
   if (!values.password) {
-    errors.password = 'Obvezno polje'
+    errors.password = 'Obavezno polje'
   }
   return errors
 }
@@ -32,22 +32,24 @@ var LoginForm = React.createClass({
         onSubmit={handleSubmit(props => this.onSubmit(props))}
         id="heroLogin" className="half-section">
 
+        <label htmlFor="email">EMAIL</label>
         <input
           {...email}
-          className="subsection full-section" type="email" placeholder="email"
+          className="subsection full-section" name="email" type="email" placeholder="emailadresa@email.com"
         />
       {email.touched && email.error && <span className="loginError">{email.error}</span>}
 
+        <label htmlFor="password">PASSWORD</label>
         <input
           {...password}
-          className="subsection full-section" type="password" placeholder="password"
+          className="subsection full-section" name="password" type="password" placeholder="e<W/5+rdqx2#nNf3"
         />
       {password.touched && password.error && <span className="loginError">{password.error}</span>}
 
         <button
           disabled={submitting}
           className="half-section" type="submit">
-          {submitting ? 'hue' : ''} Submit
+          {submitting ? 'hue' : ''} Login
         </button>
       </form>
     );

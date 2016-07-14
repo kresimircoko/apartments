@@ -11,7 +11,7 @@ import SingleApartmentContainer from '../containers/SingleApartmentContainer';
 
 
 const routes = (
-  <Router history={history}>
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={history}>
     <Route path='/' component={App}>
       <IndexRoute component={Home} />
       <Route path='/registration' component={RegisterContainer} />

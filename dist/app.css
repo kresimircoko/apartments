@@ -364,30 +364,6 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-* {
-  box-sizing: border-box; }
-
-ul {
-  padding: 0;
-  margin: 0; }
-
-input, button, textarea {
-  border: none;
-  box-shadow: none;
-  outline: none;
-  padding: 10px 20px; }
-  input:active, input:focus, button:active, button:focus, textarea:active, textarea:focus {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-
-input[type='file'] {
-  background-color: white; }
-
-button {
-  transition: box-shadow .1s ease-in-out; }
-  button:hover {
-    cursor: pointer;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-
 a, p, h1, h2, h3, h4, h5, h6, span, li, label {
   color: #212121;
   font-family: Raleway, sans-serif; }
@@ -431,6 +407,46 @@ input, button {
   color: #FF5722;
   margin-bottom: 60px; }
 
+* {
+  box-sizing: border-box; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+input, button, textarea {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 10px 20px; }
+  input:active, input:focus, button:active, button:focus, textarea:active, textarea:focus {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+
+input[type='file'] {
+  background-color: white; }
+
+button {
+  transition: box-shadow .1s ease-in-out; }
+  button:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+
+figure {
+  margin: 0; }
+
+img {
+  object-fit: cover;
+  width: 100%; }
+
+figcaption {
+  background-color: #00BCD4;
+  color: #FFFFFF;
+  width: 100%;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
+  font-size: 21px; }
+
 .main-section {
   width: 100%;
   display: flex;
@@ -450,6 +466,12 @@ input, button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
+
+.inner-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around; }
 
 .section-heading {
   width: 100%;
@@ -479,6 +501,9 @@ input, button {
 .quarter-section {
   width: 25%; }
 
+.tiny-section {
+  width: 17%; }
+
 @media screen and (max-width: 1280px) {
   .container {
     width: 1024px; } }
@@ -499,6 +524,19 @@ input, button {
     width: 100%; }
   .half-section, .third-section, .quarter-section {
     width: 100%; } }
+
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 10px 0; }
+  .half-section, .third-section, .quarter-section {
+    width: calc(100% - 20px); }
+  .subsection {
+    margin-bottom: 10px; }
+  .inner-container {
+    width: calc(100% - 20px);
+    flex-direction: column; }
+    .inner-container .subsection {
+      width: 100%; } }
 
 #mainNavigation {
   display: flex;
@@ -526,6 +564,7 @@ input, button {
     font-size: 18px; } }
 
 #heroContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -534,7 +573,7 @@ input, button {
   background-position: center center;
   background-attachment: fixed; }
 
-#heroContent {
+#heroContainer {
   flex-direction: column;
   align-items: center;
   padding: 140px 0; }
@@ -571,8 +610,18 @@ input, button {
   border: 1px solid #e81c4f; }
 
 @media screen and (max-width: 768px) {
-  #heroContent {
+  #heroContainer {
     padding: 60px 0; } }
+
+@media screen and (max-width: 480px) {
+  #heroLogin {
+    width: calc(100% - 60px); } }
+
+@media screen and (max-width: 360px) {
+  #heroDescription {
+    margin-bottom: 20px; }
+  #heroLogin button {
+    width: 100%; } }
 
 #filterContainer {
   justify-content: space-between;
@@ -613,15 +662,26 @@ input, button {
       flex-wrap: wrap;
       justify-content: space-around; } }
 
+@media screen and (max-width: 360px) {
+  #filterContainer {
+    justify-content: center; }
+  .filterCloud {
+    margin-bottom: 10px; }
+    .filterCloud ul {
+      padding: 0; } }
+
 #apartmentContainer {
   padding-top: 60px;
   background-color: #E3E3E3; }
   #apartmentContainer .container {
     justify-content: space-between;
-    padding-top: 0; }
+    padding-top: 0;
+    align-items: stretch; }
 
 .apartment {
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   width: calc(33% - 10px);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
 
@@ -629,7 +689,9 @@ input, button {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  width: 100%;
+  height: 225px; }
   .apartmentImg i {
     position: absolute;
     top: 0;
@@ -662,12 +724,14 @@ input, button {
 
 .apartmentDetailsBtn {
   width: 100%;
+  padding: 10px;
   background-color: #FF5722;
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: .3s ease-in-out; }
+  transition: .3s ease-in-out;
+  text-decoration: none; }
   .apartmentDetailsBtn i {
     padding-left: 10px;
     font-size: 18px; }
@@ -686,33 +750,44 @@ input, button {
   .apartmentDetailsBtn {
     display: block; } }
 
+@media screen and (max-width: 360px) {
+  #apartmentContainer {
+    padding: 10px 0; }
+  .apartment {
+    width: calc(100% - 20px); }
+  .apartmentImg {
+    height: 150px; }
+  .apartmentDetailsBtn {
+    text-align: center; }
+    .apartmentDetailsBtn i:before {
+      font-size: 0.75em; } }
+
 #dashboardContainer {
-  background-color: #E3E3E3; }
+  background-color: #EFEFEF; }
   #dashboardContainer .container {
     justify-content: space-between; }
 
-.dbAddApartments {
-  padding-bottom: 0; }
-  .dbAddApartments .subsection {
-    margin: 0;
-    background-color: #2ecc71;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    padding: 0; }
-  .dbAddApartments i {
-    color: #FFFFFF; }
-  .dbAddApartments h3 {
-    margin: 0;
-    padding: 40px 20px;
-    color: #FFFFFF;
-    text-align: center; }
+.dbAddApartments .subsection {
+  margin: 0;
+  background-color: #00BCD4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 0; }
+
+.dbAddApartments i {
+  color: #FFFFFF; }
+
+.dbAddApartments h3 {
+  margin: 0;
+  padding: 40px 20px;
+  color: #FFFFFF;
+  text-align: center; }
 
 .dashboardWelcome {
   background-color: #00BCD4;
-  color: #727272;
+  color: #FFFFFF;
   width: 100%;
   padding: 20px;
   text-align: center;
-  margin-top: 60px;
   margin-bottom: 0; }
 
 #dashboardForm {
@@ -847,8 +922,14 @@ input, button {
     width: 90%;
     margin: 0 auto; } }
 
+@media screen and (max-width: 360px) {
+  .dbAddApartments {
+    width: calc(100% - 20px); }
+    .dbAddApartments h3 {
+      padding: 20px; } }
+
 #registerContainer {
-  background-color: #FFFFFF;
+  background-color: #EFEFEF;
   min-height: calc(100vh - 77px); }
   #registerContainer .container {
     padding: 120px 0; }
@@ -862,7 +943,7 @@ input, button {
   #registerDescription li i {
     font-family: FontAwesome;
     padding: 10px;
-    color: #FF7F50; }
+    color: #00BCD4; }
 
 #registerForm {
   display: flex;
@@ -876,7 +957,7 @@ input, button {
     width: 100%;
     padding: 20px;
     font-family: Montserrat, sans-serif;
-    color: #FFFFFF;
+    color: #727272;
     font-weight: 600;
     text-transform: uppercase; }
   #registerForm button {
@@ -886,69 +967,172 @@ input, button {
 .registerHeading {
   margin-bottom: 60px; }
 
-#saContainer .subsection {
-  flex-direction: column;
-  margin: 0; }
+@media screen and (max-width: 360px) {
+  #registerContainer .container {
+    padding: 20px 0;
+    width: calc(100% - 20px); }
+  #registerDescription {
+    margin-bottom: 30px;
+    justify-content: center; }
+    #registerDescription li {
+      font-size: 1.2em;
+      padding: 5px;
+      width: auto; }
+      #registerDescription li i {
+        padding: 5px; }
+  .registerHeading {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px; }
+  #registerForm label {
+    padding: 5px; } }
 
-#saFeaturedImg {
+#singleHero {
   width: 100%;
   height: 60vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/includes/img/single-apartment.jpg);
-  background-size: cover;
-  background-position: center center; }
+  position: relative; }
+  #singleHero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  #singleHero .container {
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0; }
 
-#saFeaturedInfo i:before {
-  font-size: 48px;
-  margin-bottom: 10px;
-  color: #FF5722; }
+.apartmentHeroInfo {
+  background-color: #E64A19;
+  color: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  width: 20%;
+  text-align: center; }
 
-#saContactInfo {
-  background-color: #FFFFFF; }
-  #saContactInfo .subsection {
-    justify-content: center;
-    align-items: baseline;
-    flex-direction: row; }
-  #saContactInfo h3 {
-    color: #727272;
-    margin: 0;
-    text-transform: lowercase; }
-  #saContactInfo i:before {
-    padding-right: 20px;
-    color: #FF5722;
-    font-size: 28px; }
-
-#saDescription p {
-  font-family: Roboto Slab, serif;
-  font-weight: 300; }
-
-#saSecondaryInfo {
-  background-color: #FFFFFF; }
-  #saSecondaryInfo ul {
-    list-style: none;
-    align-items: stretch; }
-  #saSecondaryInfo li {
+.primaryInfo {
+  margin: 0; }
+  .primaryInfo div {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
-    width: 50%;
-    font-family: Montserrat, sans-serif;
-    margin-bottom: 10px; }
-    #saSecondaryInfo li h3 {
-      margin: 0; }
-  #saSecondaryInfo i:before {
-    margin-left: 0;
+    align-items: center; }
+  .primaryInfo span {
+    font-family: Roboto Slab, serif;
+    text-transform: capitalize; }
+  .primaryInfo i:before {
+    margin: 0;
     padding-right: 20px;
-    color: #FF5722;
-    font-size: 1.17em; }
+    font-size: 1.5em;
+    color: #00BCD4; }
+  .primaryInfo:nth-child(2) {
+    justify-content: space-around; }
 
-#saCarousel .container {
-  padding: 30px 0; }
+#singleContact {
+  display: flex;
+  padding: 60px 0;
+  flex-direction: column;
+  background-color: #333333; }
+  #singleContact .container {
+    padding: 0; }
 
-.saCarouselImg {
-  object-fit: cover; }
+#ownerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+  #ownerInfo h3 {
+    color: #00BCD4; }
+  #ownerInfo img {
+    width: 200px;
+    height: 200px;
+    border: 6px solid #00BCD4;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover; }
+  #ownerInfo .half-section {
+    align-items: baseline;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: -1px;
+    margin: 20px 0 0 0;
+    color: #FFFFFF; }
+    #ownerInfo .half-section i:before {
+      font-size: 32px;
+      margin: 0;
+      padding-right: 20px;
+      color: #00BCD4; }
 
-#saTertiaryInfo {
-  background-color: #FFFFFF; }
+#singleDescription p {
+  margin: 0; }
+
+#singleSecondary {
+  background-color: #EFEFEF; }
+
+.secondaryInfo {
+  padding-bottom: 60px; }
+  .secondaryInfo .subsection {
+    margin: 0; }
+  .secondaryInfo h3 {
+    display: flex;
+    flex-direction: column; }
+  .secondaryInfo i:before {
+    margin: 0;
+    font-size: 38px;
+    color: #00BCD4; }
+
+.singleGallery figure {
+  margin-bottom: 7px;
+  flex-direction: column;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+  .singleGallery figure img {
+    height: 250px; }
+  .singleGallery figure figcaption {
+    padding: 8px;
+    background-color: #FF5722; }
+
+@media screen and (max-width: 360px) {
+  #singleHero {
+    height: 30vh; }
+  .apartmentHeroInfo {
+    width: auto; }
+  #singlePrimary .container {
+    width: calc(100% - 20px);
+    padding: 20px 0; }
+  #singlePrimary .subsection {
+    width: 100%; }
+  #singlePrimary .half-section {
+    flex-direction: column; }
+  #singleContact {
+    padding: 10px 0; }
+  #ownerInfo img {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #00BCD4; }
+  #ownerInfo .half-section {
+    margin-top: 10px;
+    letter-spacing: 0;
+    font-weight: 300;
+    font-size: 0.95em; }
+    #ownerInfo .half-section i:before {
+      font-size: 1em;
+      padding-right: 5px; }
+  #singleDescription .container {
+    padding: 10px; }
+  #singleSecondary .secondaryInfo {
+    padding: 0;
+    margin-bottom: 10px; }
+    #singleSecondary .secondaryInfo .subsection {
+      margin-bottom: 10px; }
+  #singleSecondary .singleGallery {
+    width: calc(100% - 20px); }
+  #singleSecondary .singleImg {
+    width: calc(50% - 5px); }
+    #singleSecondary .singleImg img {
+      height: 100px; }
+    #singleSecondary .singleImg figcaption {
+      font-size: 0.85em;
+      padding: 5px; } }
 
 #appContainer {
   flex-direction: column; }

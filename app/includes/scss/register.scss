@@ -52,3 +52,166 @@
 .registerHeading {
   margin-bottom: 60px;
 }
+
+@media screen and (max-width: 1024px) {
+  #registerContainer {
+
+    .container {
+      padding: 60px 0;
+      width: calc(100% - 20px);
+    }
+  }
+
+  .registerHeading {
+    margin-bottom: 30px;
+    font-size: 1.5em;
+  }
+
+  #registerDescription {
+    li {
+      font-size: 1em;
+    }
+  }
+
+  #registerForm {
+    label {
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+
+    input {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #registerContainer {
+    min-height: initial;
+    height: auto;
+
+    .container {
+      padding: 40px 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  #registerDescription, #registerForm {
+    width: calc(100% - 80px);
+  }
+
+  .registerHeading {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+  }
+
+  #registerDescription {
+    margin-bottom: 60px;
+
+    li {
+      font-size: 1em;
+    }
+  }
+
+  #registerForm {
+    label {
+      padding: 5px 20px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  #registerContainer {
+    min-height: calc(100vh - 54px);
+
+    .container {
+      padding: 30px 0;
+      width: calc(100% - 20px);
+    }
+  }
+
+  #registerDescription {
+    margin-bottom: 30px;
+    justify-content: center;
+
+    li {
+      font-size: 1.4em;
+      padding: 5px;
+      width: auto;
+
+      i {
+        padding: 5px;
+      }
+    }
+  }
+
+  .registerHeading {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  #registerForm {
+    label {
+      padding: 5px;
+    }
+
+    input {
+      margin-bottom: 5px;
+    }
+
+    button {
+      margin: 15px 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #registerContainer {
+
+    .container {
+      padding: 20px 0;
+      width: calc(100% - 20px);
+    }
+  }
+
+  #registerDescription {
+    margin-bottom: 30px;
+    justify-content: center;
+
+    li {
+      font-size: 1.2em;
+      padding: 5px;
+      width: auto;
+
+      i {
+        padding: 5px;
+      }
+    }
+  }
+
+  .registerHeading {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  #registerForm {
+    label {
+      padding: 5px;
+    }
+  }
+}

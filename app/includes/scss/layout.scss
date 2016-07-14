@@ -75,7 +75,8 @@
 
 @media screen and (max-width: 1024px) {
 	.container {
-		width: 768px;
+		width: 100%;
+		padding: 60px 20px;
 	}
 }
 
@@ -96,6 +97,29 @@
 	}
 
 	.half-section, .third-section, .quarter-section {
-		width: 100%;
+    width: calc(100% - 20px);
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.container {
+		padding: 10px 0;
+	}
+
+	.half-section, .third-section, .quarter-section {
+    width: calc(100% - 20px);
+	}
+
+	.subsection {
+		margin-bottom: 10px;
+	}
+
+	.inner-container {
+		width: calc(100% - 20px);
+		flex-direction: column;
+
+		.subsection {
+			width: 100%;
+		}
 	}
 }

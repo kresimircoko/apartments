@@ -66,7 +66,7 @@
 	
 	var _store2 = _interopRequireDefault(_store);
 	
-	var _base = __webpack_require__(332);
+	var _base = __webpack_require__(336);
 	
 	var _base2 = _interopRequireDefault(_base);
 	
@@ -20199,15 +20199,15 @@
 	
 	var _NavContainer2 = _interopRequireDefault(_NavContainer);
 	
-	var _RegisterContainer = __webpack_require__(324);
+	var _RegisterContainer = __webpack_require__(323);
 	
 	var _RegisterContainer2 = _interopRequireDefault(_RegisterContainer);
 	
-	var _DashboardContainer = __webpack_require__(326);
+	var _DashboardContainer = __webpack_require__(325);
 	
 	var _DashboardContainer2 = _interopRequireDefault(_DashboardContainer);
 	
-	var _SingleApartmentContainer = __webpack_require__(330);
+	var _SingleApartmentContainer = __webpack_require__(329);
 	
 	var _SingleApartmentContainer2 = _interopRequireDefault(_SingleApartmentContainer);
 	
@@ -20215,14 +20215,16 @@
 	
 	var routes = _react2.default.createElement(
 	  _reactRouter.Router,
-	  { history: _store.history },
+	  { onUpdate: function onUpdate() {
+	      return window.scrollTo(0, 0);
+	    }, history: _store.history },
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'registration', component: _RegisterContainer2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'dashboard', component: _DashboardContainer2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'apartment', component: _SingleApartmentContainer2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '/registration', component: _RegisterContainer2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/dashboard', component: _DashboardContainer2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/apartment/:apartmentId', component: _SingleApartmentContainer2.default })
 	  )
 	);
 	
@@ -30952,18 +30954,266 @@
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-	   value: true
+		value: true
 	});
 	var apartments = [{
-	   "code": "BAcyDyQwcXX",
-	   "id": "1161022966406956503",
-	   "caption": "Huehuehue Testerino",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/12552326_495932673919321_1443393332_n.jpg"
+		"route": "BAcyDyQwcXX",
+		"img": "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+		"address": "Ap 613 Nam Road",
+		"price": "690,00 kn",
+		"people": 3,
+		"scale": 62,
+		"neighborhood": "Šubićevac",
+		"id": "3saf32d00",
+		"bedrooms": 2,
+		"typeof": "apartment",
+		"ownername": "Misti Lincoln",
+		"ownerimg": "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+		"owneremail": "misti@mail.com",
+		"ownerphone": "613-555-7861",
+		"gallery": [{
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Kuhinja"
+		}, {
+			img: "http://static6.businessinsider.com/image/50ff105a6bb3f7b936000009/heres-one-brilliant-interior-design-plan-for-nycs-new-micro-apartments.jpg",
+			caption: "Kuhinja #2"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Zahod"
+		}, {
+			img: "http://seashells.com.au/wp-content/uploads/Inside-the-spacious-apartment.jpg",
+			caption: "Zahod #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "https://www.amli.com/AMLIcontent/files/apartments/houston/2121/apartment-interior/2121-apartment-interior-living-room-1_B.jpg",
+			caption: "Dnevni Boravak #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Spavaća Soba"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Spavaća Soba #2"
+		}]
 	}, {
-	   "code": "BBcyDyQwcXX",
-	   "id": "1171022966406956503",
-	   "caption": "Huehuehue Testerino Two",
-	   "display_src": "https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/e35/12552326_495932673919321_1443393332_n.jpg"
+		"route": "BAcJeJrQca9",
+		"img": "http://static6.businessinsider.com/image/50ff105a6bb3f7b936000009/heres-one-brilliant-interior-design-plan-for-nycs-new-micro-apartments.jpg",
+		"address": "bana Ivana Mažuranića 14",
+		"price": "750,00 kn",
+		"people": 2,
+		"scale": 79,
+		"neighborhood": "Meterize",
+		"id": "3saf32d01",
+		"bedrooms": 3,
+		"typeof": "Stan",
+		"ownername": "Pietronella Kysely",
+		"ownerimg": "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+		"owneremail": "pietronella@mail.com",
+		"ownerphone": "613-555-0119",
+		"gallery": [{
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Kuhinja"
+		}, {
+			img: "http://static6.businessinsider.com/image/50ff105a6bb3f7b936000009/heres-one-brilliant-interior-design-plan-for-nycs-new-micro-apartments.jpg",
+			caption: "Kuhinja #2"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Zahod"
+		}, {
+			img: "http://seashells.com.au/wp-content/uploads/Inside-the-spacious-apartment.jpg",
+			caption: "Zahod #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "https://www.amli.com/AMLIcontent/files/apartments/houston/2121/apartment-interior/2121-apartment-interior-living-room-1_B.jpg",
+			caption: "Dnevni Boravak #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Spavaća Soba"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Spavaća Soba #2"
+		}]
+	}, {
+		"route": "BAF_KY4wcRY",
+		"img": "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+		"address": "3001 Ligula. St.",
+		"price": "880,00 kn",
+		"people": 1,
+		"scale": 45,
+		"neighborhood": "Baldekin",
+		"id": "3saf32d02",
+		"bedrooms": 1,
+		"typeof": "room",
+		"ownername": "Riaz Tyson",
+		"ownerimg": "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+		"owneremail": "riaz@mail.com",
+		"ownerphone": "613-555-1355",
+		"gallery": [{
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Kuhinja"
+		}, {
+			img: "http://static6.businessinsider.com/image/50ff105a6bb3f7b936000009/heres-one-brilliant-interior-design-plan-for-nycs-new-micro-apartments.jpg",
+			caption: "Kuhinja #2"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Zahod"
+		}, {
+			img: "http://seashells.com.au/wp-content/uploads/Inside-the-spacious-apartment.jpg",
+			caption: "Zahod #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "https://www.amli.com/AMLIcontent/files/apartments/houston/2121/apartment-interior/2121-apartment-interior-living-room-1_B.jpg",
+			caption: "Dnevni Boravak #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Spavaća Soba"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Spavaća Soba #2"
+		}]
+	}, {
+		"route": "BAPIPRjQce9",
+		"img": "http://seashells.com.au/wp-content/uploads/Inside-the-spacious-apartment.jpg",
+		"address": "459-2943 Donec Rd.",
+		"price": "1100,00 kn",
+		"people": 1,
+		"scale": 67,
+		"neighborhood": "Vidici",
+		"id": "3saf32d03",
+		"bedrooms": 2,
+		"typeof": "apartment",
+		"ownername": "Ernestina Hawk",
+		"ownerimg": "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+		"owneremail": "ernesta@mail.com",
+		"ownerphone": "613-555-4658",
+		"gallery": [{
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Kuhinja"
+		}, {
+			img: "http://static6.businessinsider.com/image/50ff105a6bb3f7b936000009/heres-one-brilliant-interior-design-plan-for-nycs-new-micro-apartments.jpg",
+			caption: "Kuhinja #2"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Zahod"
+		}, {
+			img: "http://seashells.com.au/wp-content/uploads/Inside-the-spacious-apartment.jpg",
+			caption: "Zahod #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "https://www.amli.com/AMLIcontent/files/apartments/houston/2121/apartment-interior/2121-apartment-interior-living-room-1_B.jpg",
+			caption: "Dnevni Boravak #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Spavaća Soba"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Spavaća Soba #2"
+		}]
+	}, {
+		"route": "-hZh6IQcfN",
+		"img": "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+		"address": "1034 Donec Ave",
+		"price": "930,00 kn",
+		"people": 2,
+		"scale": 63,
+		"neighborhood": "Grad",
+		"id": "3saf32d04",
+		"bedrooms": 2,
+		"typeof": "house",
+		"ownername": "Jacinta Bautista",
+		"ownerimg": "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+		"owneremail": "jacinta@mail.com",
+		"ownerphone": "613-555-0248",
+		"gallery": [{
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Kuhinja"
+		}, {
+			img: "http://static6.businessinsider.com/image/50ff105a6bb3f7b936000009/heres-one-brilliant-interior-design-plan-for-nycs-new-micro-apartments.jpg",
+			caption: "Kuhinja #2"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Zahod"
+		}, {
+			img: "http://seashells.com.au/wp-content/uploads/Inside-the-spacious-apartment.jpg",
+			caption: "Zahod #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "https://www.amli.com/AMLIcontent/files/apartments/houston/2121/apartment-interior/2121-apartment-interior-living-room-1_B.jpg",
+			caption: "Dnevni Boravak #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Spavaća Soba"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Spavaća Soba #2"
+		}]
+	}, {
+		"route": "BAhvZrRwcfu",
+		"img": "https://www.amli.com/AMLIcontent/files/apartments/houston/2121/apartment-interior/2121-apartment-interior-living-room-1_B.jpg",
+		"address": "358-9943 Erat Rd.",
+		"price": "770,00 kn",
+		"people": 3,
+		"scale": 61,
+		"neighborhood": "Rokići",
+		"id": "3saf32d05",
+		"bedrooms": 2,
+		"typeof": "apartment",
+		"ownername": "Nsonowa Roosa",
+		"ownerimg": "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+		"owneremail": "nsonowa@mail.com",
+		"ownerphone": "613-555-9687",
+		"gallery": [{
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Kuhinja"
+		}, {
+			img: "http://static6.businessinsider.com/image/50ff105a6bb3f7b936000009/heres-one-brilliant-interior-design-plan-for-nycs-new-micro-apartments.jpg",
+			caption: "Kuhinja #2"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Zahod"
+		}, {
+			img: "http://seashells.com.au/wp-content/uploads/Inside-the-spacious-apartment.jpg",
+			caption: "Zahod #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "https://www.amli.com/AMLIcontent/files/apartments/houston/2121/apartment-interior/2121-apartment-interior-living-room-1_B.jpg",
+			caption: "Dnevni Boravak #2"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/360/36022937.jpg",
+			caption: "Dnevni Boravak"
+		}, {
+			img: "http://www.idesignarch.com/wp-content/uploads/Apartment-Green-Walls_1.jpg",
+			caption: "Spavaća Soba"
+		}, {
+			img: "http://q-ec.bstatic.com/images/hotel/840x460/477/47708583.jpg",
+			caption: "Spavaća Soba #2"
+		}]
 	}];
 	
 	exports.default = apartments;
@@ -30996,12 +31246,14 @@
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
+	// Data
 	function mapStateToProps(state) {
 	  return {
 	    apartments: state.apartments
 	  };
 	}
 	
+	// Actions
 	function mapDispatchToProps(dispatch) {
 	  return (0, _redux.bindActionCreators)(actionCreators, dispatch);
 	}
@@ -31019,13 +31271,13 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.increment = increment;
+	exports.addApartment = addApartment;
 	exports.addComment = addComment;
 	exports.removeComment = removeComment;
-	// increment
-	function increment(index) {
+	// Add a new apartment
+	function addApartment(index) {
 	  return {
-	    type: 'INCREMENT_LIKES',
+	    type: 'ADD_APARTMENT',
 	    index: index
 	  };
 	}
@@ -31159,11 +31411,6 @@
 	        _reactRouter.Link,
 	        { to: 'registration' },
 	        'Register'
-	      ),
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: 'apartment' },
-	        'Apartment'
 	      )
 	    )
 	  );
@@ -31209,7 +31456,7 @@
 	      null,
 	      _react2.default.createElement(_HeroContainer2.default, null),
 	      _react2.default.createElement(_FilterContainer2.default, null),
-	      _react2.default.createElement(_ApartmentContainer2.default, null)
+	      _react2.default.createElement(_ApartmentContainer2.default, this.props)
 	    );
 	  }
 	});
@@ -31241,11 +31488,7 @@
 	var HeroContainer = _react2.default.createClass({
 	  displayName: 'HeroContainer',
 	  render: function render() {
-	    return _react2.default.createElement(
-	      'section',
-	      { id: 'heroContainer', className: 'full-container' },
-	      _react2.default.createElement(_Hero2.default, null)
-	    );
+	    return _react2.default.createElement(_Hero2.default, null);
 	  }
 	});
 	
@@ -31279,8 +31522,8 @@
 	
 	function Hero() {
 	  return _react2.default.createElement(
-	    'div',
-	    { id: 'heroContent', className: 'container' },
+	    'section',
+	    { id: 'heroContainer', className: 'container' },
 	    _react2.default.createElement(
 	      'h1',
 	      { id: 'heroHeading' },
@@ -31378,7 +31621,7 @@
 	          disabled: submitting,
 	          className: 'half-section', type: 'submit' },
 	        submitting ? 'hue' : '',
-	        ' Submit'
+	        ' Login'
 	      )
 	    );
 	  }
@@ -31432,11 +31675,6 @@
 	    return _react2.default.createElement(
 	      'section',
 	      { id: 'filterContainer', className: 'container' },
-	      _react2.default.createElement(
-	        'h2',
-	        { id: 'filterHeading', className: 'full-section' },
-	        'FILTRIRAJ'
-	      ),
 	      _react2.default.createElement(_Filter2.default, {
 	        name: 'Kvart',
 	        filterList: ['Šubićevac', 'Meterize', 'Baldekin', 'Vidici', 'Rokići', 'Grad'] }),
@@ -31518,6 +31756,8 @@
 	  value: true
 	});
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; // Parent of Apartment
+	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -31528,17 +31768,12 @@
 	
 	var _Apartment2 = _interopRequireDefault(_Apartment);
 	
-	var _Test = __webpack_require__(323);
-	
-	var _Test2 = _interopRequireDefault(_Test);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	// Parent of Apartment
 	
 	var ApartmentContainer = _react2.default.createClass({
 	  displayName: 'ApartmentContainer',
 	  render: function render() {
+	    var _this = this;
 	
 	    return _react2.default.createElement(
 	      'div',
@@ -31546,53 +31781,8 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
-	        _react2.default.createElement(_Apartment2.default, {
-	          img: 'http://www.hotel-r.net/im/hotel/am/apartments-21.jpg',
-	          price: '768.00',
-	          neighborhood: 'Šubićevac',
-	          size: '47',
-	          people: '2',
-	          route: '#'
-	        }),
-	        _react2.default.createElement(_Apartment2.default, {
-	          img: 'http://www.hotel-r.net/im/hotel/am/apartments-21.jpg',
-	          price: '1024.00',
-	          neighborhood: 'Meterize',
-	          size: '126',
-	          people: '3',
-	          route: '#'
-	        }),
-	        _react2.default.createElement(_Apartment2.default, {
-	          img: 'http://www.hotel-r.net/im/hotel/am/apartments-21.jpg',
-	          price: '512.00',
-	          neighborhood: 'Vidici',
-	          size: '68',
-	          people: '3',
-	          route: '#'
-	        }),
-	        _react2.default.createElement(_Apartment2.default, {
-	          img: 'http://www.hotel-r.net/im/hotel/am/apartments-21.jpg',
-	          price: '748.00',
-	          neighborhood: 'Baldekin',
-	          size: '47',
-	          people: '2',
-	          route: '#'
-	        }),
-	        _react2.default.createElement(_Apartment2.default, {
-	          img: 'http://www.hotel-r.net/im/hotel/am/apartments-21.jpg',
-	          price: '748.00',
-	          neighborhood: 'Šubićevac',
-	          size: '47',
-	          people: '2',
-	          route: '#'
-	        }),
-	        _react2.default.createElement(_Apartment2.default, {
-	          img: 'http://www.hotel-r.net/im/hotel/am/apartments-21.jpg',
-	          price: '748.00',
-	          neighborhood: 'Šubićevac',
-	          size: '47',
-	          people: '2',
-	          route: '#'
+	        this.props.apartments.map(function (apartment, i) {
+	          return _react2.default.createElement(_Apartment2.default, _extends({}, _this.props, { key: i, i: i, apartment: apartment }));
 	        })
 	      )
 	    );
@@ -31600,12 +31790,6 @@
 	});
 	
 	exports.default = ApartmentContainer;
-	
-	// <div className="test">
-	//   {this.props.apartments.map(
-	//     (apartment, i) => <Test {...this.props} key={i} i={i} apartment={apartment} />
-	//   )}
-	// </div>
 
 /***/ },
 /* 322 */
@@ -31629,27 +31813,15 @@
 	
 	var Apartment = _react2.default.createClass({
 	  displayName: 'Apartment',
-	
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      img: '',
-	      price: '',
-	      neighborhood: '',
-	      size: '',
-	      people: '',
-	      route: ''
-	    };
-	  },
 	  render: function render() {
+	    var _props = this.props;
+	    var apartment = _props.apartment;
+	    var i = _props.i;
+	
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'apartment third-section subsection' },
-	      _react2.default.createElement(
-	        'section',
-	        { className: 'apartmentImg' },
-	        _react2.default.createElement('i', { className: 'fa fa-heart' }),
-	        _react2.default.createElement('img', { src: this.props.img, alt: '#' })
-	      ),
+	      _react2.default.createElement('img', { src: apartment.img, alt: apartment.address, className: 'apartmentImg' }),
 	      _react2.default.createElement(
 	        'section',
 	        { className: 'apartmentInfo' },
@@ -31658,38 +31830,36 @@
 	          null,
 	          _react2.default.createElement('i', { className: 'fa fa-money' }),
 	          ' ',
-	          this.props.price,
-	          ' kn'
+	          apartment.price
 	        ),
 	        _react2.default.createElement(
 	          'span',
 	          null,
 	          _react2.default.createElement('i', { className: 'fa fa-group' }),
 	          ' ',
-	          this.props.people
+	          apartment.people
 	        ),
 	        _react2.default.createElement(
 	          'span',
 	          null,
 	          _react2.default.createElement('i', { className: 'fa fa-expand' }),
 	          ' ',
-	          this.props.size,
-	          ' m²'
+	          apartment.scale,
+	          'm²'
 	        ),
 	        _react2.default.createElement(
 	          'span',
 	          null,
 	          _react2.default.createElement('i', { className: 'fa fa-map-marker' }),
 	          ' ',
-	          this.props.neighborhood
+	          apartment.neighborhood
 	        )
 	      ),
 	      _react2.default.createElement(
-	        'button',
-	        { href: this.props.route, className: 'apartmentDetailsBtn', type: 'button' },
+	        _reactRouter.Link,
+	        { to: '/apartment/' + apartment.route, className: 'apartmentDetailsBtn' },
 	        'Detalji ',
-	        _react2.default.createElement('i', { className: 'fa fa-chevron-right' }),
-	        ' '
+	        _react2.default.createElement('i', { className: 'fa fa-chevron-right' })
 	      )
 	    );
 	  }
@@ -31699,39 +31869,6 @@
 
 /***/ },
 /* 323 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var Test = _react2.default.createClass({
-	  displayName: "Test",
-	  render: function render() {
-	    var _props = this.props;
-	    var apartment = _props.apartment;
-	    var i = _props.i;
-	
-	    return _react2.default.createElement(
-	      "div",
-	      { className: "test" },
-	      "this is a test"
-	    );
-	  }
-	});
-	
-	exports.default = Test;
-
-/***/ },
-/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31746,7 +31883,7 @@
 	
 	var _reactRouter = __webpack_require__(169);
 	
-	var _Register = __webpack_require__(325);
+	var _Register = __webpack_require__(324);
 	
 	var _Register2 = _interopRequireDefault(_Register);
 	
@@ -31766,7 +31903,7 @@
 	exports.default = RegisterContainer;
 
 /***/ },
-/* 325 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31823,18 +31960,6 @@
 	          null,
 	          _react2.default.createElement('i', { className: 'fa-li fa-comments-o' }),
 	          ' Komentiranje stanova'
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement('i', { className: 'fa-li fa-check' }),
-	          ' Placeholder'
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement('i', { className: 'fa-li fa-check' }),
-	          ' placeholder'
 	        )
 	      )
 	    ),
@@ -31844,7 +31969,7 @@
 	      _react2.default.createElement(
 	        'h1',
 	        { className: 'registerHeading' },
-	        'Registrirajte se ovdje.'
+	        'Registrirajte se ovdje'
 	      ),
 	      _react2.default.createElement(
 	        'label',
@@ -31870,7 +31995,7 @@
 	exports.default = Register;
 
 /***/ },
-/* 326 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31885,11 +32010,11 @@
 	
 	var _reactRouter = __webpack_require__(169);
 	
-	var _DashboardForm = __webpack_require__(327);
+	var _DashboardForm = __webpack_require__(326);
 	
 	var _DashboardForm2 = _interopRequireDefault(_DashboardForm);
 	
-	var _DashboardOverview = __webpack_require__(329);
+	var _DashboardOverview = __webpack_require__(328);
 	
 	var _DashboardOverview2 = _interopRequireDefault(_DashboardOverview);
 	
@@ -31933,7 +32058,7 @@
 	exports.default = DashboardContainer;
 
 /***/ },
-/* 327 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31952,7 +32077,7 @@
 	
 	var _hero_beach2 = _interopRequireDefault(_hero_beach);
 	
-	var _DashFormInput = __webpack_require__(328);
+	var _DashFormInput = __webpack_require__(327);
 	
 	var _DashFormInput2 = _interopRequireDefault(_DashFormInput);
 	
@@ -32137,7 +32262,7 @@
 	exports.default = DashboardForm;
 
 /***/ },
-/* 328 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32232,7 +32357,7 @@
 	exports.default = DashFormInput;
 
 /***/ },
-/* 329 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32335,6 +32460,46 @@
 	exports.default = DashboardOverview;
 
 /***/ },
+/* 329 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(169);
+	
+	var _SingleApartment = __webpack_require__(330);
+	
+	var _SingleApartment2 = _interopRequireDefault(_SingleApartment);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SingleApartmentContainer = _react2.default.createClass({
+	  displayName: 'SingleApartmentContainer',
+	  render: function render() {
+	    var _this = this;
+	
+	    var i = this.props.apartments.findIndex(function (apartment) {
+	      return apartment.route === _this.props.params.apartmentId;
+	    });
+	    var apartment = this.props.apartments[i];
+	
+	    return _react2.default.createElement(_SingleApartment2.default, _extends({ i: i, apartment: apartment }, this.props));
+	  }
+	});
+	
+	exports.default = SingleApartmentContainer;
+
+/***/ },
 /* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32344,344 +32509,268 @@
 	  value: true
 	});
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
 	var _reactRouter = __webpack_require__(169);
 	
-	var _Apartment = __webpack_require__(322);
+	var _SingleHero = __webpack_require__(331);
 	
-	var _Apartment2 = _interopRequireDefault(_Apartment);
+	var _SingleHero2 = _interopRequireDefault(_SingleHero);
 	
-	var _singleApartment = __webpack_require__(331);
+	var _SinglePrimary = __webpack_require__(332);
 	
-	var _singleApartment2 = _interopRequireDefault(_singleApartment);
+	var _SinglePrimary2 = _interopRequireDefault(_SinglePrimary);
+	
+	var _SingleContact = __webpack_require__(333);
+	
+	var _SingleContact2 = _interopRequireDefault(_SingleContact);
+	
+	var _SingleDescription = __webpack_require__(334);
+	
+	var _SingleDescription2 = _interopRequireDefault(_SingleDescription);
+	
+	var _SingleSecondary = __webpack_require__(335);
+	
+	var _SingleSecondary2 = _interopRequireDefault(_SingleSecondary);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var ApartmentContainer = _react2.default.createClass({
-	  displayName: 'ApartmentContainer',
+	var SingleApartment = _react2.default.createClass({
+	  displayName: 'SingleApartment',
 	  render: function render() {
+	    var _this = this;
+	
+	    var i = this.props.apartments.findIndex(function (apartment) {
+	      return apartment.route === _this.props.params.apartmentId;
+	    });
+	    var apartment = this.props.apartments[i];
+	
 	    return _react2.default.createElement(
 	      'div',
-	      { id: 'saContainer', className: 'full-container' },
-	      _react2.default.createElement('div', { id: 'saFeaturedImg' }),
+	      { id: 'singleApartmentContainer' },
+	      _react2.default.createElement(_SingleHero2.default, _extends({ i: i, apartment: apartment }, this.props)),
+	      _react2.default.createElement(_SinglePrimary2.default, _extends({ i: i, apartment: apartment }, this.props)),
+	      _react2.default.createElement(_SingleContact2.default, _extends({ i: i, apartment: apartment }, this.props)),
+	      _react2.default.createElement(_SingleDescription2.default, _extends({ i: i, apartment: apartment }, this.props)),
+	      _react2.default.createElement(_SingleSecondary2.default, _extends({ i: i, apartment: apartment }, this.props))
+	    );
+	  }
+	});
+	
+	exports.default = SingleApartment;
+
+/***/ },
+/* 331 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SingleHero = _react2.default.createClass({
+	  displayName: "SingleHero",
+	  render: function render() {
+	    var _this = this;
+	
+	    var i = this.props.apartments.findIndex(function (apartment) {
+	      return apartment.route === _this.props.params.apartmentId;
+	    });
+	    var apartment = this.props.apartments[i];
+	
+	    return _react2.default.createElement(
+	      "section",
+	      { id: "singleHero" },
+	      _react2.default.createElement("img", { src: apartment.img, alt: apartment.address }),
 	      _react2.default.createElement(
-	        'section',
-	        { id: 'saFeaturedInfo', className: 'section-content' },
+	        "div",
+	        { className: "container" },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'container' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'quarter-section subsection' },
-	            _react2.default.createElement('i', { className: 'flaticon-money' }),
-	            _react2.default.createElement(
-	              'h3',
-	              null,
-	              '678.00 kn'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'quarter-section subsection' },
-	            _react2.default.createElement('i', { className: 'flaticon-people' }),
-	            _react2.default.createElement(
-	              'h3',
-	              null,
-	              '2 Osobe'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'quarter-section subsection' },
-	            _react2.default.createElement('i', { className: 'flaticon-home-1' }),
-	            _react2.default.createElement(
-	              'h3',
-	              null,
-	              '1 Spavaća Soba'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'quarter-section subsection' },
-	            _react2.default.createElement('i', { className: 'flaticon-home' }),
-	            _react2.default.createElement(
-	              'h3',
-	              null,
-	              '63 m',
-	              _react2.default.createElement(
-	                'sup',
-	                null,
-	                '2'
-	              )
-	            )
-	          )
+	          "span",
+	          { className: "apartmentHeroInfo" },
+	          " ",
+	          apartment.price,
+	          " "
+	        ),
+	        _react2.default.createElement(
+	          "span",
+	          { className: "apartmentHeroInfo" },
+	          " ",
+	          apartment.people,
+	          " osobe "
 	        )
-	      ),
+	      )
+	    );
+	  }
+	});
+	
+	exports.default = SingleHero;
+
+/***/ },
+/* 332 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SinglePrimary = _react2.default.createClass({
+	  displayName: "SinglePrimary",
+	  render: function render() {
+	    var _this = this;
+	
+	    var i = this.props.apartments.findIndex(function (apartment) {
+	      return apartment.route === _this.props.params.apartmentId;
+	    });
+	    var apartment = this.props.apartments[i];
+	
+	    return _react2.default.createElement(
+	      "section",
+	      { id: "singlePrimary" },
 	      _react2.default.createElement(
-	        'section',
-	        { id: 'saContactInfo', className: 'section-content' },
+	        "div",
+	        { className: "container" },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'container' },
+	          "div",
+	          { className: "third-section subsection primaryInfo" },
+	          _react2.default.createElement("i", { className: "flaticon-signs" }),
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'half-section subsection' },
-	            _react2.default.createElement(
-	              'h3',
-	              null,
-	              _react2.default.createElement('i', { className: 'flaticon-phone-call' }),
-	              '091/187-3710'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'half-section subsection' },
-	            _react2.default.createElement(
-	              'h3',
-	              null,
-	              _react2.default.createElement('i', { className: 'flaticon-envelope' }),
-	              'kresimircoko@gmail.com'
-	            )
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'section',
-	        { id: 'saDescription', className: 'section-content' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'container' },
-	          _react2.default.createElement(
-	            'h2',
-	            { className: 'section-heading' },
-	            'Description'
-	          ),
-	          _react2.default.createElement(
-	            'p',
+	            "span",
 	            null,
-	            'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-	          ),
+	            " ",
+	            apartment.address,
+	            " "
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "half-section subsection primaryInfo" },
 	          _react2.default.createElement(
-	            'p',
+	            "div",
 	            null,
-	            'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'section',
-	        { id: 'saSecondaryInfo', className: 'section-content' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'container' },
-	          _react2.default.createElement(
-	            'h2',
-	            { className: 'section-heading' },
-	            'Secondary Info'
-	          ),
-	          _react2.default.createElement(
-	            'ul',
-	            { className: 'half-section subsection' },
+	            _react2.default.createElement("i", { className: "flaticon-home" }),
 	            _react2.default.createElement(
-	              'li',
+	              "span",
 	              null,
-	              _react2.default.createElement('i', { className: 'flaticon-wifi' }),
+	              " ",
+	              apartment.scale,
+	              " m",
 	              _react2.default.createElement(
-	                'h3',
+	                "sup",
 	                null,
-	                ' Internet  '
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement('i', { className: 'flaticon-stairs' }),
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                ' 3. kat  '
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                'Balkon '
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                'Grijanje '
-	              )
+	                "2"
+	              ),
+	              " "
 	            )
 	          ),
 	          _react2.default.createElement(
-	            'ul',
-	            { className: 'half-section subsection' },
+	            "div",
+	            null,
+	            _react2.default.createElement("i", { className: "flaticon-home-1" }),
 	            _react2.default.createElement(
-	              'li',
+	              "span",
 	              null,
-	              _react2.default.createElement('i', { className: 'flaticon-transport' }),
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                ' 5 min  '
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement('i', { className: 'flaticon-city' }),
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                ' Zgrada  '
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                'Klima '
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                'MaxTV (ili slično) '
-	              )
+	              " ",
+	              apartment.bedrooms,
+	              " Spavaće sobe"
 	            )
 	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'section',
-	        { id: 'saCarousel', className: 'section-content' },
+	        ),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'container' },
-	          _react2.default.createElement('img', { src: './includes/img/single-apartment.jpg', alt: 'apartmentCarouselImg', className: 'saCarouselImg' })
+	          "div",
+	          { className: "tiny-section subsection primaryInfo" },
+	          _react2.default.createElement("i", { className: "flaticon-city" }),
+	          _react2.default.createElement(
+	            "span",
+	            null,
+	            " ",
+	            apartment.typeof,
+	            " "
+	          )
 	        )
-	      ),
+	      )
+	    );
+	  }
+	});
+	
+	exports.default = SinglePrimary;
+
+/***/ },
+/* 333 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SingleContact = _react2.default.createClass({
+	  displayName: "SingleContact",
+	  render: function render() {
+	    var _this = this;
+	
+	    var i = this.props.apartments.findIndex(function (apartment) {
+	      return apartment.route === _this.props.params.apartmentId;
+	    });
+	    var apartment = this.props.apartments[i];
+	
+	    return _react2.default.createElement(
+	      "section",
+	      { id: "singleContact" },
 	      _react2.default.createElement(
-	        'section',
-	        { id: 'saTertiaryInfo', className: 'section-content' },
+	        "div",
+	        { className: "container" },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'container' },
+	          "div",
+	          { id: "ownerInfo" },
+	          _react2.default.createElement("img", { src: apartment.ownerimg, alt: apartment.ownername }),
 	          _react2.default.createElement(
-	            'h2',
-	            { className: 'section-heading' },
-	            'Tertiary Info'
+	            "h3",
+	            null,
+	            apartment.ownername
 	          ),
 	          _react2.default.createElement(
-	            'ul',
-	            { className: 'quarter-section subsection' },
+	            "div",
+	            { className: "inner-container" },
 	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
+	              "h3",
+	              { className: "half-section subsection" },
+	              _react2.default.createElement("i", { className: "flaticon-envelope" }),
+	              " ",
+	              apartment.owneremail
 	            ),
 	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'ul',
-	            { className: 'quarter-section subsection' },
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'ul',
-	            { className: 'quarter-section subsection' },
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'ul',
-	            { className: 'quarter-section subsection' },
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Placeholder'
+	              "h3",
+	              { className: "half-section subsection" },
+	              _react2.default.createElement("i", { className: "flaticon-phone-call" }),
+	              " ",
+	              apartment.ownerphone
 	            )
 	          )
 	        )
@@ -32690,16 +32779,131 @@
 	  }
 	});
 	
-	exports.default = ApartmentContainer;
+	exports.default = SingleContact;
 
 /***/ },
-/* 331 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "/includes/img/single-apartment.jpg";
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SingleDescription = _react2.default.createClass({
+	  displayName: "SingleDescription",
+	  render: function render() {
+	    var _this = this;
+	
+	    var i = this.props.apartments.findIndex(function (apartment) {
+	      return apartment.route === _this.props.params.apartmentId;
+	    });
+	    var apartment = this.props.apartments[i];
+	
+	    return _react2.default.createElement(
+	      "section",
+	      { id: "singleDescription" },
+	      _react2.default.createElement(
+	        "div",
+	        { className: "container" },
+	        _react2.default.createElement(
+	          "p",
+	          null,
+	          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	exports.default = SingleDescription;
 
 /***/ },
-/* 332 */
+/* 335 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SingleSecondary = _react2.default.createClass({
+	  displayName: "SingleSecondary",
+	  render: function render() {
+	    var _this = this;
+	
+	    var i = this.props.apartments.findIndex(function (apartment) {
+	      return apartment.route === _this.props.params.apartmentId;
+	    });
+	    var apartment = this.props.apartments[i];
+	
+	    return _react2.default.createElement(
+	      "section",
+	      { id: "singleSecondary" },
+	      _react2.default.createElement(
+	        "div",
+	        { className: "container" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "section-content secondaryInfo" },
+	          _react2.default.createElement(
+	            "h3",
+	            { className: "third-section subsection" },
+	            _react2.default.createElement("i", { className: "flaticon-wifi" }),
+	            "Internet"
+	          ),
+	          _react2.default.createElement(
+	            "h3",
+	            { className: "third-section subsection" },
+	            _react2.default.createElement("i", { className: "flaticon-transport" }),
+	            "Blizina Autobusa"
+	          ),
+	          _react2.default.createElement(
+	            "h3",
+	            { className: "third-section subsection" },
+	            _react2.default.createElement("i", { className: "flaticon-stairs" }),
+	            "3. Kat"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "section-content singleGallery" },
+	          apartment.gallery.map(function (item, i) {
+	            return _react2.default.createElement(
+	              "figure",
+	              { className: "singleImg third-section subsection" },
+	              _react2.default.createElement("img", { src: item.img, key: i }),
+	              _react2.default.createElement(
+	                "figcaption",
+	                null,
+	                item.caption
+	              )
+	            );
+	          })
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	exports.default = SingleSecondary;
+
+/***/ },
+/* 336 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

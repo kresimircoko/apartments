@@ -28,7 +28,7 @@ html {
   @media (max-width: 900px) {
     font-size: 20px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 560px) {
     font-size: 14px;
   }
 }
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
 }
 
-h3 {
+h3, label {
   color: $secondary-text-color;
   text-transform: uppercase;
   font-family: $Mont;
@@ -52,6 +52,10 @@ h3 {
 
 input, button {
   font-family: $Mont;
+}
+
+i:before {
+  font-weight: 300;
 }
 
 .section-heading {

@@ -73,7 +73,7 @@
   background-color: $primary-color;
   color: $primary-color-text;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   transition: .3s ease-in-out;
   text-decoration: none;
@@ -90,8 +90,11 @@
 
 @media screen and (max-width: 768px) {
   #apartmentContainer {
+    padding-top: 20px;
+
     .container {
       justify-content: space-around;
+  		padding: 0;
     }
   }
 
@@ -101,13 +104,70 @@
 
   .apartmentInfo {
     padding: 10px;
+    flex-direction: column;
+    align-items: stretch;
 
     span {
       padding: 8px;
     }
   }
+}
+
+@media screen and (max-width: 480px) {
+  #apartmentContainer {
+    padding-top: 10px;
+
+    .container {
+      width: calc(100% - 20px);
+      justify-content: space-between;
+      padding-bottom: 0;
+    }
+  }
+
+  .apartment {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+  }
+
+  .apartmentImg {
+    height: 125px;
+  }
+
+  .apartmentInfo {
+    padding: 5px 10px;
+
+    span {
+      padding: 3px;
+    }
+  }
 
   .apartmentDetailsBtn {
-    display: block;
+    padding: 5px;
+
+    i:before {
+      font-size: 0.7em;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #apartmentContainer {
+    padding: 10px 0;
+  }
+
+  .apartment {
+    width: 100%;
+  }
+
+  .apartmentImg {
+    height: 150px;
+  }
+
+  .apartmentDetailsBtn {
+    text-align: center;
+
+    i:before {
+      font-size: 0.75em;
+    }
   }
 }
