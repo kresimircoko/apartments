@@ -35,14 +35,14 @@ var LoginForm = React.createClass({
         <label htmlFor="email">EMAIL</label>
         <input
           {...email}
-          className="subsection full-section" name="email" type="email" placeholder="emailadresa@email.com"
+          className="subsection full-section" name="email" type="email" placeholder="korisnik@email.com"
         />
       {email.touched && email.error && <span className="loginError">{email.error}</span>}
 
         <label htmlFor="password">PASSWORD</label>
         <input
           {...password}
-          className="subsection full-section" name="password" type="password" placeholder="e<W/5+rdqx2#nNf3"
+          className="subsection full-section" name="password" type="password" placeholder="*********"
         />
       {password.touched && password.error && <span className="loginError">{password.error}</span>}
 

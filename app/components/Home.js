@@ -3,14 +3,36 @@ import { ReactRouter, Link } from 'react-router';
 import HeroContainer from '../containers/HeroContainer';
 import FilterContainer from '../containers/FilterContainer';
 import ApartmentContainer from '../containers/ApartmentContainer';
+// import FilteredApartmentsContainer from '../containers/FilteredApartmentsContainer';
+
+{/* Needs to be part of the state of FilterContainer and ApartmentContainer */}
+
+var FilteredApartmentsContainer = React.createClass({
+  getInitialState() {
+    return {
+    };
+  },
+  handleFilterUpdate(filterValue) {
+    this.setState({
+      clicked: true
+    });
+  },
+  render () {
+    return (
+      <div>
+        <FilterContainer />
+        <ApartmentContainer {...this.props} />
+      </div>
+    );
+  }
+});
 
 var Home = React.createClass({
   render () {
     return (
       <div>
         <HeroContainer />
-        <FilterContainer />
-        <ApartmentContainer {...this.props} />
+        <FilteredApartmentsContainer {...this.props} />
       </div>
     )
   }

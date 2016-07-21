@@ -1,6 +1,11 @@
 import React from 'react';
 import { ReactRouter, Link } from 'react-router';
 
+{/*
+  Needs to accept a callback when the configuration is updated
+  The configuration is then passed to both FilterContainer and ApartmentContainer for removing the apartments that dont match the filter
+*/}
+
 var Filter = React.createClass({
   getInitialState() {
     return {
@@ -12,16 +17,15 @@ var Filter = React.createClass({
       filterList: [],
       name: '',
       id: '',
-      props: []
+      props: [],
+      value: ''
     };
   },
   render() {
     var selected = [];
 
     var handleClick = function(i, filterList) {
-      console.log('You clicked: ' + filterList[i]);
       this.setState({clicked: i});
-
       var index = this.state.selected.indexOf(i);
       if (index === -1) {
         this.state.selected.push(i);
@@ -37,8 +41,13 @@ var Filter = React.createClass({
         <h3>{this.props.name}</h3>
         <ul>
           {this.props.filterList.map(function(listValue, i) {
-            return <li className={this.state.selected.indexOf(i) > -1 ? 'selected' : ''} onClick={handleClick.bind(this, i, this.props.filterList)} key={i}>{listValue}</li>;
-          }, this)} {/* this at the end to fix the scope issue from global to local */}
+            return <li
+              className={this.state.selected.indexOf(i) > -1 ? 'selected' : ''}
+              onClick={handleClick.bind(this, i, this.props.filterList)}
+              key={i}>
+              {listValue}
+            </li>;
+          }, this)}
         </ul>
       </div>
     )
