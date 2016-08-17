@@ -10,44 +10,30 @@ var Filter = React.createClass({
   getInitialState() {
     return {
       selected: []
-    };
+    }
   },
   getDefaultProps() {
     return {
-      filterList: [],
       name: '',
       id: '',
-      props: [],
-      value: ''
+      props: []
     };
   },
   render() {
-    var selected = [];
-
-    var handleClick = function(i, filterList) {
-      this.setState({clicked: i});
-      var index = this.state.selected.indexOf(i);
-      if (index === -1) {
-        this.state.selected.push(i);
-      } else {
-        this.state.selected.splice(index, 1);
-      }
-    }
-
-    var className = this.state.clicked ? 'selected' : '';
-
     return (
       <div id={this.props.id} className="filterCloud quarter-section">
         <h3>{this.props.name}</h3>
         <ul>
           {this.props.filterList.map(function(listValue, i) {
+            var activeClass = '';
+            if(this.state.selected.indexOf(listValue) > -1) {
+              activeClass = 'selected';
+            }
             return <li
-              className={this.state.selected.indexOf(i) > -1 ? 'selected' : ''}
-              onClick={handleClick.bind(this, i, this.props.filterList)}
-              key={i}>
-              {listValue}
-            </li>;
-          }, this)}
+              className = {activeClass}
+              onClick = {() => {this.props.onClick(listValue, this.props.id)}}
+              key={i}> {listValue} </li>;
+          }.bind(this))}
         </ul>
       </div>
     )
@@ -63,3 +49,4 @@ export default Filter;
   this.state.selected.indexOf(i) > -1 ? 'selected' : '' -> if in an array give it clicked, otherwise empty string
 
 */}
+// var className = this.state.clicked ? 'selected' : '';

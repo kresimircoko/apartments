@@ -5,6 +5,9 @@ import { routerReducer } from 'react-router-redux';
 import apartments from './apartments';
 import {reducer as formReducer} from 'redux-form';
 
-const rootReducer = combineReducers({form: formReducer, apartments, routing: routerReducer});
+const rootReducer = combineReducers({
+  form: formReducer, apartments,
+  routing: routerReducer,
+});
 
 export default rootReducer;

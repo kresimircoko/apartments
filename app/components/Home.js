@@ -5,23 +5,23 @@ import FilterContainer from '../containers/FilterContainer';
 import ApartmentContainer from '../containers/ApartmentContainer';
 // import FilteredApartmentsContainer from '../containers/FilteredApartmentsContainer';
 
+
 {/* Needs to be part of the state of FilterContainer and ApartmentContainer */}
 
 var FilteredApartmentsContainer = React.createClass({
-  getInitialState() {
-    return {
-    };
-  },
   handleFilterUpdate(filterValue) {
     this.setState({
       clicked: true
     });
   },
+  changeHandler: function(value) {
+    this.refs.ApartmentContainerRef.handleFilter(value);
+  },
   render () {
     return (
       <div>
-        <FilterContainer />
-        <ApartmentContainer {...this.props} />
+        <FilterContainer onChange={this.changeHandler} />
+        <ApartmentContainer ref="ApartmentContainerRef" {...this.props} />
       </div>
     );
   }

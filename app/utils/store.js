@@ -2,7 +2,6 @@ import { createStore, compose } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 import { ReactRouter, Link } from 'react-router';
-
 import rootReducer from '../reducers/reducer';
 
 // Placeholder data

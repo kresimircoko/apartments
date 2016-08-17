@@ -1,6 +1,12 @@
 import React, { PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
-export const fields = ['email', 'password']
+
+var app = firebase.initializeApp({
+ apiKey: "AIzaSyC8AfUZa1eu1xkOWhvigjAFjj_viF0SKyI",
+ authDomain: "rentr-82ad0.firebaseapp.com",
+ databaseURL: "https://rentr-82ad0.firebaseio.com",
+ storageBucket: "rentr-82ad0.appspot.com",
+});
 
 const validate = values => {
   const errors = {}
@@ -14,6 +20,7 @@ const validate = values => {
   }
   return errors
 }
+
 
 var LoginForm = React.createClass({
   onSubmit(props) {
